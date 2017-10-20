@@ -1,3 +1,4 @@
+// go run -tags zookeeper client.go
 package main
 
 import (
@@ -10,13 +11,14 @@ import (
 )
 
 var (
-	addr = flag.String("addr", "localhost:8972", "server address")
+	addr1 = flag.String("addr1", "localhost:8972", "server1 address")
+	addr2 = flag.String("addr2", "localhost:9981", "server2 address")
 )
 
 func main() {
 	flag.Parse()
 
-	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
+	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
 	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

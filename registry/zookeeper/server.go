@@ -19,6 +19,8 @@ var (
 )
 
 func main() {
+	flag.Parse()
+
 	s := server.NewServer(nil)
 	addRegistryPlugin(s)
 

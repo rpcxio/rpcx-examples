@@ -16,6 +16,8 @@ var (
 )
 
 func main() {
+	flag.Parse()
+
 	d := client.NewEtcdDiscovery(*basePath, []string{*etcdAddr})
 	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()

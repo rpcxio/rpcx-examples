@@ -14,6 +14,8 @@ var (
 )
 
 func main() {
+	flag.Parse()
+
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr2, "")
 	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
