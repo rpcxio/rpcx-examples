@@ -17,7 +17,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewConsulDiscovery(*basePath, []string{*consulAddr})
+	d := client.NewConsulDiscovery(*basePath, []string{*consulAddr}, nil)
 	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
