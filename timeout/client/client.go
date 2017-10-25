@@ -31,7 +31,7 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), args, reply, nil)
+	err := xclient.Call(context.Background(), args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

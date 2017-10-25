@@ -35,7 +35,7 @@ func main() {
 	reply := &example.Reply{}
 	ctx := context.WithValue(context.Background(), share.ReqMetaDataKey, map[string]string{"aaa": "from client"})
 	ctx = context.WithValue(ctx, share.ResMetaDataKey, make(map[string]string))
-	err := xclient.Call(ctx, args, reply, nil)
+	err := xclient.Call(ctx, args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

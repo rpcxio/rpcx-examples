@@ -26,7 +26,7 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	call, err := xclient.Go(context.Background(), args, reply, nil, nil)
+	call, err := xclient.Go(context.Background(), args, reply, nil)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}
