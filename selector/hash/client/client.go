@@ -18,9 +18,11 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RoundRobin, d, client.DefaultOption)
+	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1, Value: "latitude=39.9289&longitude=116.3883"},
+		{Key: *addr2, Value: "latitude=139.3453&longitude=23.3243"}})
+	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.ConsistentHash, d, client.DefaultOption)
 	defer xclient.Close()
+	xclient.ConfigGeoSelector(39.30, 116.40)
 
 	args := &example.Args{
 		A: 10,

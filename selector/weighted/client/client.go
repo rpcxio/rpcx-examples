@@ -11,8 +11,8 @@ import (
 )
 
 var (
-	addr1 = flag.String("addr1", "localhost:8972", "server address")
-	addr2 = flag.String("addr2", "localhost:8973", "server address")
+	addr1 = flag.String("addr1", "tcp@localhost:8972", "server address")
+	addr2 = flag.String("addr2", "tcp@localhost:8973", "server address")
 )
 
 func main() {
