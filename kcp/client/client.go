@@ -29,7 +29,7 @@ func main() {
 	option.Block = bc
 
 	d := client.NewPeer2PeerDiscovery("kcp@"+*addr, "")
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RoundRobin, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{
