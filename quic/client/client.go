@@ -1,4 +1,4 @@
-//go run -tags udp client.go
+//go run -tags quic client.go
 package main
 
 import (

@@ -1,3 +1,5 @@
+//go run -tags kreuseportcp server.go
+
 package main
 
 import (
