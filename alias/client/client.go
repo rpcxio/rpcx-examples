@@ -1,35 +1,28 @@
-//go run -tags kcp client.go
 package main
 
 import (
 	"context"
-	"crypto/sha1"
 	"flag"
 	"log"
+	"time"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
-	kcp "github.com/xtaci/kcp-go"
-	"golang.org/x/crypto/pbkdf2"
 )
 
 var (
 	addr = flag.String("addr", "localhost:8972", "server address")
 )
 
-const cryptKey = "rpcx-key"
-const cryptSalt = "rpcx-salt"
-
 func main() {
 	flag.Parse()
 
-	pass := pbkdf2.Key([]byte(cryptKey), []byte(cryptSalt), 4096, 32, sha1.New)
-	bc, _ := kcp.NewAESBlockCrypt(pass)
-	option := client.DefaultOption
-	option.Block = bc
+	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 
-	d := client.NewPeer2PeerDiscovery("kcp@"+*addr, "")
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RoundRobin, d, option)
+	option := client.DefaultOption
+	option.ReadTimeout = 10 * time.Second
+
+	xclient := client.NewXClient("a.b.c.D", "Times", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{

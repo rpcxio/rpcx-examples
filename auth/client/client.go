@@ -1,11 +1,12 @@
-//go run -tags quic client.go
 package main
 
 import (
 	"context"
-	"crypto/tls"
 	"flag"
 	"log"
+	"time"
+
+	"github.com/smallnest/rpcx/share"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
@@ -18,16 +19,16 @@ var (
 func main() {
 	flag.Parse()
 
-	conf := &tls.Config{
-		InsecureSkipVerify: true,
-	}
+	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 
 	option := client.DefaultOption
-	option.TLSConfig = conf
+	option.ReadTimeout = 10 * time.Second
 
-	d := client.NewPeer2PeerDiscovery("quic@"+*addr, "")
 	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
+
+	//xclient.Auth("bearer tGzv3JOkF0XG5Qx2TlKWIA")
+	xclient.Auth("bearer abcdefg1234567")
 
 	args := &example.Args{
 		A: 10,
@@ -35,7 +36,8 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), args, reply)
+	ctx := context.WithValue(context.Background(), share.ReqMetaDataKey, make(map[string]string))
+	err := xclient.Call(ctx, args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

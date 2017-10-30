@@ -1,4 +1,4 @@
-//go run -tags udp server.go
+//go run -tags kcp server.go
 package main
 
 import (

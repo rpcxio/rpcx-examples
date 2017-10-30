@@ -1,3 +1,5 @@
+//go run -tags kcp client.go
+
 package main
 
 import (
