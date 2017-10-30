@@ -21,7 +21,7 @@ var (
 func main() {
 	flag.Parse()
 
-	s := server.NewServer(nil)
+	s := server.NewServer()
 	addRegistryPlugin(s)
 
 	s.RegisterName("Arith", new(example.Arith), "")

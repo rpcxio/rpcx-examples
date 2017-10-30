@@ -26,9 +26,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	options := map[string]interface{}{"BlockCrypt": bc}
 
-	s := server.NewServer(options)
+	s := server.NewServer(server.WithBlockCrypt(bc))
 	s.RegisterName("Arith", new(example.Arith), "")
 
 	err = s.Serve("kcp", *addr)

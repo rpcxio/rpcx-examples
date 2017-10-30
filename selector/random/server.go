@@ -31,13 +31,13 @@ func main() {
 	flag.Parse()
 
 	go func() {
-		s := server.NewServer(nil)
+		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith), "")
 		s.Serve("reuseport", *addr1)
 	}()
 
 	go func() {
-		s := server.NewServer(nil)
+		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith2), "")
 		s.Serve("reuseport", *addr2)
 	}()

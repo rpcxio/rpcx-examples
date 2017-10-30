@@ -17,7 +17,7 @@ func main() {
 
 	a := serverplugin.NewAliasPlugin()
 	a.Alias("a.b.c.D", "Times", "Arith", "Mul")
-	s := server.NewServer(nil)
+	s := server.NewServer()
 	s.Plugins.Add(a)
 	s.RegisterName("Arith", new(example.Arith), "")
 	err := s.Serve("reuseport", *addr)

@@ -35,7 +35,7 @@ func main() {
 }
 
 func createServer(addr string) {
-	s := server.NewServer(nil)
+	s := server.NewServer()
 	s.RegisterName("Arith", new(Arith), "")
 	s.Serve("tcp", addr)
 }

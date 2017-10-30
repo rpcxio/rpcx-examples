@@ -25,8 +25,11 @@ func main() {
 
 	config := &tls.Config{Certificates: []tls.Certificate{cert}}
 
-	s := server.Server{TLSConfig: config}
+	s := server.NewServer(server.WithTLSConfig(config))
 	s.RegisterName("Arith", new(example.Arith), "")
 
-	s.Serve("quic", *addr)
+	err = s.Serve("quic", *addr)
+	if err != nil {
+		panic(err)
+	}
 }

@@ -24,7 +24,7 @@ func main() {
 
 	config := &tls.Config{Certificates: []tls.Certificate{cert}}
 
-	s := server.Server{TLSConfig: config}
+	s := server.NewServer(server.WithTLSConfig(config))
 	s.RegisterName("Arith", new(example.Arith), "")
 	s.Serve("tcp", *addr)
 }
