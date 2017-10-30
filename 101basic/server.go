@@ -14,7 +14,8 @@ var (
 func main() {
 	flag.Parse()
 
-	s := server.Server{}
-	s.RegisterName("Arith", new(example.Arith), "")
+	s := server.NewServer(nil)
+	//s.RegisterName("Arith", new(example.Arith), "")
+	s.Register(new(example.Arith), "")
 	s.Serve("tcp", *addr)
 }
