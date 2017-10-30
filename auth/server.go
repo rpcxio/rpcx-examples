@@ -17,7 +17,7 @@ var (
 func main() {
 	flag.Parse()
 
-	s := server.Server{}
+	s := server.NewServer(nil)
 	s.RegisterName("Arith", new(example.Arith), "")
 	s.AuthFunc = auth
 	s.Serve("reuseport", *addr)

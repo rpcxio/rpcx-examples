@@ -23,7 +23,7 @@ func main() {
 	option.Heartbeat = true
 	option.HeartbeatInterval = time.Second
 
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -33,7 +33,7 @@ func main() {
 
 	for i := 0; i < 10; i++ {
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), args, reply)
+		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
 		}

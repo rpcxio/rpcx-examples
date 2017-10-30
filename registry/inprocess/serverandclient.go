@@ -30,7 +30,7 @@ func main() {
 	}()
 
 	d := client.NewInpreocessDiscovery()
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -41,7 +41,7 @@ func main() {
 	for i := 0; i < 100; i++ {
 
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), args, reply)
+		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
 		}

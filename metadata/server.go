@@ -32,7 +32,7 @@ func (t *Arith) Mul(ctx context.Context, args *example.Args, reply *example.Repl
 func main() {
 	flag.Parse()
 
-	s := server.Server{}
+	s := server.NewServer(nil)
 	s.RegisterName("Arith", new(Arith), "")
 	s.Serve("tcp", *addr)
 }

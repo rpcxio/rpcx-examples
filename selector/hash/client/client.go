@@ -20,7 +20,7 @@ func main() {
 
 	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1, Value: "latitude=39.9289&longitude=116.3883"},
 		{Key: *addr2, Value: "latitude=139.3453&longitude=23.3243"}})
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.ConsistentHash, d, client.DefaultOption)
+	xclient := client.NewXClient("Arith", client.Failtry, client.ConsistentHash, d, client.DefaultOption)
 	defer xclient.Close()
 	xclient.ConfigGeoSelector(39.30, 116.40)
 
@@ -31,7 +31,7 @@ func main() {
 
 	for i := 0; i < 10; i++ {
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), args, reply)
+		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
 		}

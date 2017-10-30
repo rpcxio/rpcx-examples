@@ -1,4 +1,4 @@
-//go run -tags kreuseportcp server.go
+//go run -tags reuseport server.go
 
 package main
 
@@ -16,7 +16,7 @@ var (
 func main() {
 	flag.Parse()
 
-	s := server.Server{}
+	s := server.NewServer(nil)
 	s.RegisterName("Arith", new(example.Arith), "")
 	s.Serve("reuseport", *addr)
 }

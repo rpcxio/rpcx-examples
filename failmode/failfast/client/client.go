@@ -21,7 +21,7 @@ func main() {
 	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
 	option := client.DefaultOption
 	option.Retries = 10
-	xclient := client.NewXClient("Arith", "Mul", client.Failfast, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", client.Failfast, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -31,7 +31,7 @@ func main() {
 
 	for i := 0; i < 10; i++ {
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), args, reply)
+		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Printf("failed to call: %v", err)
 		} else {

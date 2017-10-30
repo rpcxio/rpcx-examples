@@ -17,7 +17,7 @@ func main() {
 	flag.Parse()
 
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr2, "")
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -26,7 +26,7 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	call, err := xclient.Go(context.Background(), args, reply, nil)
+	call, err := xclient.Go(context.Background(), "Mul", args, reply, nil)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

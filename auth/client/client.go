@@ -24,7 +24,7 @@ func main() {
 	option := client.DefaultOption
 	option.ReadTimeout = 10 * time.Second
 
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	//xclient.Auth("bearer tGzv3JOkF0XG5Qx2TlKWIA")
@@ -37,7 +37,7 @@ func main() {
 
 	reply := &example.Reply{}
 	ctx := context.WithValue(context.Background(), share.ReqMetaDataKey, make(map[string]string))
-	err := xclient.Call(ctx, args, reply)
+	err := xclient.Call(ctx, "Mul", args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

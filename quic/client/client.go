@@ -26,7 +26,7 @@ func main() {
 	option.TLSConfig = conf
 
 	d := client.NewPeer2PeerDiscovery("quic@"+*addr, "")
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -35,7 +35,7 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), args, reply)
+	err := xclient.Call(context.Background(), "Mul", args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

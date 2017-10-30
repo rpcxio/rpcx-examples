@@ -18,7 +18,7 @@ func main() {
 	flag.Parse()
 
 	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, client.DefaultOption)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -27,7 +27,7 @@ func main() {
 	}
 
 	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), args, reply)
+	err := xclient.Call(context.Background(), "Mul", args, reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}

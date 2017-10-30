@@ -1,4 +1,4 @@
-//go run -tags kcp client.go
+//go run -tags reuseport client.go
 
 package main
 
@@ -24,7 +24,7 @@ func main() {
 	option := client.DefaultOption
 	option.ReadTimeout = 10 * time.Second
 
-	xclient := client.NewXClient("Arith", "Mul", client.Failtry, client.RandomSelect, d, option)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -34,7 +34,7 @@ func main() {
 
 	for {
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), args, reply)
+		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
 		}
