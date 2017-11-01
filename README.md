@@ -19,13 +19,13 @@ go get -u -v -tags 'zookeeper' github.com/smallanest/rpcx/..."
 Similarly， if you want to use `etcd` registry and `quic` network, you need to :
 
 ```sh
-go get -u -v -tags 'etcd udp' github.com/smallanest/rpcx/..."
+go get -u -v -tags 'etcd quic' github.com/smallanest/rpcx/..."
 ```
 
 You can install all features of rpcx with those below tags:
 
 ```sh
-go get -u -v -tags 'zookeeper etcd consul ping udp' github.com/smallanest/rpcx/..."
+go get -u -v -tags 'zookeeper etcd consul ping quic kcp reuseport' github.com/smallanest/rpcx/..."
 ```
 
 If you install succeefullly, you can run examples in this repository.
