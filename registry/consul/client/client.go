@@ -11,13 +11,13 @@ import (
 
 var (
 	consulAddr = flag.String("consulAddr", "localhost:8500", "consul address")
-	basePath   = flag.String("base", "/rpcx_test/Arith", "prefix path")
+	basePath   = flag.String("base", "/rpcx_test", "prefix path")
 )
 
 func main() {
 	flag.Parse()
 
-	d := client.NewConsulDiscovery(*basePath, []string{*consulAddr}, nil)
+	d := client.NewConsulDiscovery(*basePath, "Arith", []string{*consulAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

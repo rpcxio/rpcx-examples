@@ -12,13 +12,13 @@ import (
 
 var (
 	zkAddr   = flag.String("zkAddr", "localhost:2181", "zookeeper address")
-	basePath = flag.String("base", "/rpcx_test/Arith", "prefix path")
+	basePath = flag.String("base", "/rpcx_test", "prefix path")
 )
 
 func main() {
 	flag.Parse()
 
-	d := client.NewZookeeperDiscovery(*basePath, []string{*zkAddr}, nil)
+	d := client.NewZookeeperDiscovery(*basePath, "Arith", []string{*zkAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

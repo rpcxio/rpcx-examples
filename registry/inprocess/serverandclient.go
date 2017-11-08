@@ -29,7 +29,7 @@ func main() {
 		s.Serve("tcp", *addr)
 	}()
 
-	d := client.NewInpreocessDiscovery()
+	d := client.NewInprocessDiscovery()
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
