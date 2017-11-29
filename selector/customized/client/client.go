@@ -24,7 +24,7 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.SelectByUser, d, client.DefaultOption)
 	defer xclient.Close()
 
-	xclient.SetSelector(&alwaysOneSelector{})
+	xclient.SetSelector(&alwaysFirstSelector{})
 
 	args := &example.Args{
 		A: 10,
@@ -45,11 +45,11 @@ func main() {
 
 }
 
-type alwaysOneSelector struct {
+type alwaysFirstSelector struct {
 	servers []string
 }
 
-func (s *alwaysOneSelector) Select(ctx context.Context, servicePath, serviceMethod string, args interface{}) string {
+func (s *alwaysFirstSelector) Select(ctx context.Context, servicePath, serviceMethod string, args interface{}) string {
 	var ss = s.servers
 	if len(ss) == 0 {
 		return ""
@@ -58,7 +58,7 @@ func (s *alwaysOneSelector) Select(ctx context.Context, servicePath, serviceMeth
 	return ss[0]
 }
 
-func (s *alwaysOneSelector) UpdateServer(servers map[string]string) {
+func (s *alwaysFirstSelector) UpdateServer(servers map[string]string) {
 	var ss = make([]string, 0, len(servers))
 	for k := range servers {
 		ss = append(ss, k)
