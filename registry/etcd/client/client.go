@@ -5,6 +5,7 @@ import (
 	"context"
 	"flag"
 	"log"
+	"time"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
@@ -19,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	d := client.NewEtcdDiscovery(*basePath, "Arith", []string{*etcdAddr}, nil)
-	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
+	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 
 	args := &example.Args{
@@ -27,12 +28,18 @@ func main() {
 		B: 20,
 	}
 
-	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), "Mul", args, reply)
-	if err != nil {
-		log.Fatalf("failed to call: %v", err)
-	}
+	for {
+		reply := &example.Reply{}
+		err := xclient.Call(context.Background(), "Mul", args, reply)
+		if err != nil {
+			log.Printf("failed to call: %v\n", err)
+			time.Sleep(5 * time.Second)
+			continue
+		}
 
-	log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+		log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+
+		time.Sleep(5 * time.Second)
+	}
 
 }
