@@ -12,7 +12,6 @@ import (
 )
 
 var (
-	etcdAddr = flag.String("etcdAddr", "localhost:2379", "etcd address")
 	basePath = flag.String("base", "/rpcx_test/Arith", "prefix path")
 )
 
