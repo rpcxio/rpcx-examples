@@ -3,6 +3,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"time"
 
@@ -25,7 +26,10 @@ func main() {
 	addRegistryPlugin(s)
 
 	s.RegisterName("Arith", new(example.Arith), "")
-	s.Serve("tcp", *addr)
+	err := s.Serve("tcp", *addr)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
 func addRegistryPlugin(s *server.Server) {
