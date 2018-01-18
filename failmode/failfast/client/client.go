@@ -1,4 +1,3 @@
-// go run -tags zookeeper client.go
 package main
 
 import (
