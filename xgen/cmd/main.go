@@ -16,7 +16,6 @@ import (
 
 var (
 	addr     = flag.String("addr", "localhost:8972", "server address")
-	rAddr = flag.String("rAddr", "localhost:2379", "register address")
 	basePath = flag.String("base", "/rpcx", "prefix path")
 )
 	
@@ -35,23 +34,11 @@ func main() {
 	s.Serve("tcp", *addr)
 }
 func registerServices(s *server.Server) {
-	s.Register(new(xgen.TimeS), "")
 	s.Register(new(xgen.Arith), "")
 	s.Register(new(xgen.Echo), "")
+	s.Register(new(xgen.TimeS), "")
 }
 func addRegistryPlugin(s *server.Server) {
-	// add registery
-	r := &serverplugin.EtcdRegisterPlugin{
-		ServiceAddress: "tcp@" + *addr,
-		EtcdServers:    []string{*rAddr},
-		BasePath:       *basePath,
-		Metrics:        metrics.NewRegistry(),
-		UpdateInterval: time.Minute,
-	}
 
-	err := r.Start()
-	if err != nil {
-		//log.Fatal(err)
-	}
-	s.Plugins.Add(r)
+		
 }
