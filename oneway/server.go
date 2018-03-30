@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/server"
@@ -15,8 +16,8 @@ var (
 type Arith struct{}
 
 // the second parameter is not a pointer
-func (t *Arith) Mul(ctx context.Context, args example.Args, reply *example.Reply) error {
-	reply.C = args.A * args.B
+func (t *Arith) Mul(ctx context.Context, args example.Args, reply *interface{}) error {
+	fmt.Printf("args: %v, oneway:true\n", args)
 	return nil
 }
 
