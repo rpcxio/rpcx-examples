@@ -33,13 +33,13 @@ func main() {
 	go func() {
 		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith), "weight=7")
-		s.Serve("reuseport", *addr1)
+		s.Serve("tcp", *addr1)
 	}()
 
 	go func() {
 		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith2), "weight=3")
-		s.Serve("reuseport", *addr2)
+		s.Serve("tcp", *addr2)
 	}()
 
 	select {}
