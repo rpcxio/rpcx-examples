@@ -25,7 +25,14 @@ func main() {
 	addRegistryPlugin(s)
 
 	s.RegisterName("Arith", new(example.Arith), "")
-	s.Serve("tcp", *addr)
+	go s.Serve("tcp", *addr)
+
+	time.Sleep(time.Minute)
+
+	err := s.UnregisterAll()
+	if err != nil {
+		panic(err)
+	}
 }
 
 func addRegistryPlugin(s *server.Server) {
