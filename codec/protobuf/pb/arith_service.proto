@@ -1,0 +1,13 @@
+// protoc --gogofaster_out=. arith_service.proto
+syntax = "proto3";
+
+package pb;
+
+message ProtoArgs { 
+    int32 A = 1;
+    int32 B = 2;
+}
+
+message ProtoReply { 
+    int32 C = 1;
+}
