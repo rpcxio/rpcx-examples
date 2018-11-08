@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/smallnest/rpcx/share"
+	"github.com/smallnest/rpcx/blob/master/share"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/server"
