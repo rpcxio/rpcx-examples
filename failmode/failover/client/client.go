@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"log"
+	"time"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
@@ -28,7 +29,7 @@ func main() {
 		B: 20,
 	}
 
-	for i := 0; i < 10; i++ {
+	for {
 		reply := &example.Reply{}
 		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
@@ -37,5 +38,6 @@ func main() {
 			log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 		}
 
+		time.Sleep(time.Second)
 	}
 }

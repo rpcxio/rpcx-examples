@@ -15,8 +15,8 @@ var (
 func main() {
 	flag.Parse()
 
-	go createServer(*addr1)
-	//go createServer(*addr2)
+	//go createServer(*addr1)
+	go createServer(*addr2)
 
 	select {}
 }
