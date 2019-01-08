@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 	"log"
 	"time"
 
@@ -29,10 +30,12 @@ func main() {
 
 	for {
 		reply := &example.Reply{}
+		start := time.Now()
 		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Printf("ERROR failed to call: %v", err)
 		}
+		fmt.Println(time.Since(start).Nanoseconds() / int64(time.Millisecond))
 
 		log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 		time.Sleep(1e9)
