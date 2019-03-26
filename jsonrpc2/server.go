@@ -24,10 +24,17 @@ func main() {
 	flag.Parse()
 
 	s := server.NewServer()
+	configCORS(s)
 	//s.Register(new(Arith), "")
 	s.RegisterName("Arith", new(Arith), "")
 	err := s.Serve("tcp", *addr)
 	if err != nil {
 		panic(err)
 	}
+}
+
+func configCORS(s *server.Server) {
+	opt := server.AllowAllCORSOptions()
+
+	s.SetCORS(opt)
 }
