@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/gob"
 	"flag"
-	"fmt"
 
 	"github.com/smallnest/rpcx/protocol"
 	"github.com/smallnest/rpcx/share"
@@ -30,7 +29,7 @@ func main() {
 type GobCodec struct {
 }
 
-func (c *GobCodec) Decode(data []byte, i interface{}) error {)
+func (c *GobCodec) Decode(data []byte, i interface{}) error {
 	enc := gob.NewDecoder(bytes.NewBuffer(data))
 	err := enc.Decode(i)
 	return err
