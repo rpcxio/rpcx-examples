@@ -5,7 +5,9 @@ import (
 	"context"
 	"crypto/tls"
 	"flag"
+	"fmt"
 	"log"
+	"time"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
@@ -34,12 +36,17 @@ func main() {
 		B: 20,
 	}
 
-	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), "Mul", args, reply)
-	if err != nil {
-		log.Fatalf("failed to call: %v", err)
+	start := time.Now()
+	for i := 0; i < 100000; i++ {
+		reply := &example.Reply{}
+		err := xclient.Call(context.Background(), "Mul", args, reply)
+		if err != nil {
+			log.Fatalf("failed to call: %v", err)
+		}
+
+		//log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 	}
+	t := time.Since(start).Nanoseconds() / int64(time.Millisecond)
 
-	log.Printf("%d * %d = %d", args.A, args.B, reply.C)
-
+	fmt.Printf("tps: %d calls/s\n", 100000*1000/int(t))
 }
