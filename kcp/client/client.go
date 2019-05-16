@@ -5,7 +5,10 @@ import (
 	"context"
 	"crypto/sha1"
 	"flag"
+	"fmt"
 	"log"
+	"net"
+	"time"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
@@ -32,17 +35,40 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.RoundRobin, d, option)
 	defer xclient.Close()
 
+	// plugin
+	cs := &ConfigUDPSession{}
+	pc := client.NewPluginContainer()
+	pc.Add(cs)
+	xclient.SetPlugins(pc)
+
 	args := &example.Args{
 		A: 10,
 		B: 20,
 	}
 
-	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), "Mul", args, reply)
-	if err != nil {
-		log.Fatalf("failed to call: %v", err)
+	start := time.Now()
+	for i := 0; i < 10000; i++ {
+		reply := &example.Reply{}
+		err := xclient.Call(context.Background(), "Mul", args, reply)
+		if err != nil {
+			log.Fatalf("failed to call: %v", err)
+		}
+		//log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+	}
+	dur := time.Since(start)
+	qps := 10000 * 1000 / int(dur/time.Millisecond)
+	fmt.Printf("qps: %d call/s", qps)
+}
+
+type ConfigUDPSession struct{}
+
+func (p *ConfigUDPSession) ConnCreated(conn net.Conn) (net.Conn, error) {
+	session, ok := conn.(*kcp.UDPSession)
+	if !ok {
+		return conn, nil
 	}
 
-	log.Printf("%d * %d = %d", args.A, args.B, reply.C)
-
+	session.SetACKNoDelay(true)
+	session.SetStreamMode(true)
+	return conn, nil
 }
