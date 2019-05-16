@@ -4,6 +4,7 @@ package main
 import (
 	"crypto/sha1"
 	"flag"
+	"net"
 
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/server"
@@ -30,8 +31,24 @@ func main() {
 	s := server.NewServer(server.WithBlockCrypt(bc))
 	s.RegisterName("Arith", new(example.Arith), "")
 
+	cs := &ConfigUDPSession{}
+	s.Plugins.Add(cs)
+
 	err = s.Serve("kcp", *addr)
 	if err != nil {
 		panic(err)
 	}
+}
+
+type ConfigUDPSession struct{}
+
+func (p *ConfigUDPSession) HandleConnAccept(conn net.Conn) (net.Conn, bool) {
+	session, ok := conn.(*kcp.UDPSession)
+	if !ok {
+		return conn, true
+	}
+
+	session.SetACKNoDelay(true)
+	session.SetStreamMode(true)
+	return conn, true
 }
