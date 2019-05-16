@@ -44,7 +44,7 @@ func main() {
 			log.Fatalf("failed to call: %v", err)
 		}
 
-		//log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+		log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 	}
 	t := time.Since(start).Nanoseconds() / int64(time.Millisecond)
 
