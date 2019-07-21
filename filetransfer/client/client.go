@@ -21,7 +21,7 @@ func main() {
 	xclient := client.NewXClient(serverplugin.SendFileServiceName, client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
-	err := xclient.Sendfile(context.Background(), "abc.txt", 0)
+	err := xclient.SendFile(context.Background(), "abc.txt", 0)
 	if err != nil {
 		panic(err)
 	}

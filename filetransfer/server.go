@@ -21,7 +21,7 @@ func main() {
 
 	s := server.NewServer()
 
-	p := serverplugin.NewFileTransfer(*fileTransferAddr, saveFilehandler, 1000)
+	p := serverplugin.NewFileTransfer(*fileTransferAddr, saveFilehandler, nil, 1000)
 	serverplugin.RegisterFileTransfer(s, p)
 
 	err := s.Serve("tcp", *addr)
