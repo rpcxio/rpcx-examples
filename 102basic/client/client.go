@@ -5,6 +5,8 @@ import (
 	"flag"
 	"log"
 
+	"github.com/smallnest/rpcx/protocol"
+
 	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
 )
@@ -17,7 +19,10 @@ func main() {
 	flag.Parse()
 
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
-	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
+	opt := client.DefaultOption
+	opt.SerializeType = protocol.JSON
+
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, opt)
 	defer xclient.Close()
 
 	args := example.Args{
