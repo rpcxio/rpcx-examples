@@ -30,7 +30,7 @@ func main() {
 
 	for {
 		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), "Mul", args, reply)
+		err := xclient.Call(context.Background(), "mul", args, reply)
 		if err != nil {
 			log.Printf("failed to call: %v\n", err)
 			time.Sleep(5 * time.Second)
