@@ -43,12 +43,12 @@ func main() {
 type ConnectionPlugin struct {
 }
 
-func (p *ConnectionPlugin) ClientConnected(conn net.Conn) (net.Conn, bool) {
+func (p *ConnectionPlugin) ClientConnected(conn net.Conn) (net.Conn, error) {
 	log.Printf("server %v connected", conn.RemoteAddr().String())
 	return conn, true
 }
 
-func (p *ConnectionPlugin) ClientConnectionClose(conn net.Conn) bool {
+func (p *ConnectionPlugin) ClientConnectionClose(conn net.Conn) error {
 	log.Printf("server %v closed", conn.RemoteAddr().String())
 	return true
 }
