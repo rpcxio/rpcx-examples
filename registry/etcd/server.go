@@ -1,4 +1,3 @@
-// go run -tags etcd server.go
 package main
 
 import (

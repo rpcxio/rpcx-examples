@@ -1,4 +1,3 @@
-// go run -tags consul server.go
 package main
 
 import (
