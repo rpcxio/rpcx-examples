@@ -1,0 +1,70 @@
+2020/02/28 16:18:20 InitLocalIp, LocalIp:192.168.1.15 
+2020/02/28 16:18:20 [INFO] udp server start, port: 55647
+2020/02/28 16:18:21 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582877901006,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:18:21 [INFO] adding DEFAULT_GROUP@@Arith with test to listener map
+2020/02/28 16:18:21 10 * 20 = 200
+2020/02/28 16:18:26 10 * 20 = 20000
+2020/02/28 16:18:46 InitLocalIp, LocalIp:192.168.1.15 
+2020/02/28 16:18:46 [INFO] udp server start, port: 55136
+2020/02/28 16:18:47 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582877927079,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:18:47 [INFO] adding DEFAULT_GROUP@@Arith with test to listener map
+2020/02/28 16:18:47 10 * 20 = 200
+2020/02/28 16:18:51 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":false,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":false,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582877930969,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:18:52 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":false,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":false,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582877931969,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:18:52 10 * 20 = 200
+2020/02/28 16:18:53 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":false,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":false,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"1519ed4ad88592a3be59edc96a0799cb","lastRefTime":1582877933030,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:18:57 10 * 20 = 200
+2020/02/28 16:19:02 10 * 20 = 200
+2020/02/28 16:19:07 10 * 20 = 200
+2020/02/28 16:19:08 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"941325edf5ecbc7636813aafcf8620b3","lastRefTime":1582877948018,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:19:09 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"941325edf5ecbc7636813aafcf8620b3","lastRefTime":1582877949029,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:19:10 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"941325edf5ecbc7636813aafcf8620b3","lastRefTime":1582877950025,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:19:12 10 * 20 = 200
+2020/02/28 16:19:17 10 * 20 = 200
+2020/02/28 16:19:22 10 * 20 = 200
+2020/02/28 16:19:27 10 * 20 = 200
+2020/02/28 16:19:32 10 * 20 = 200
+2020/02/28 16:19:37 10 * 20 = 200
+2020/02/28 16:19:42 10 * 20 = 200
+2020/02/28 16:19:47 10 * 20 = 200
+2020/02/28 16:19:52 10 * 20 = 200
+2020/02/28 16:19:57 10 * 20 = 200
+2020/02/28 16:20:02 10 * 20 = 200
+2020/02/28 16:20:08 [INFO] udp server start, port: 55650
+2020/02/28 16:20:08 InitLocalIp, LocalIp:192.168.1.15 
+2020/02/28 16:20:09 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"941325edf5ecbc7636813aafcf8620b3","lastRefTime":1582878008957,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:20:09 [INFO] adding DEFAULT_GROUP@@Arith with test to listener map
+2020/02/28 16:20:09 10 * 20 = 200
+2020/02/28 16:20:14 10 * 20 = 200
+2020/02/28 16:20:19 10 * 20 = 200
+2020/02/28 16:20:24 10 * 20 = 200
+2020/02/28 16:20:29 10 * 20 = 200
+2020/02/28 16:20:34 10 * 20 = 200
+2020/02/28 16:20:37 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878036929,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:20:38 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878037932,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:20:39 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878038934,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:20:39 10 * 20 = 200
+2020/02/28 16:20:44 10 * 20 = 20000
+2020/02/28 16:21:11 InitLocalIp, LocalIp:192.168.1.15 
+2020/02/28 16:21:11 [INFO] udp server start, port: 55641
+2020/02/28 16:21:11 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878071613,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:21:11 [INFO] adding DEFAULT_GROUP@@Arith with test to listener map
+2020/02/28 16:21:11 10 * 20 = 200
+2020/02/28 16:21:16 10 * 20 = 20000
+2020/02/28 16:21:21 10 * 20 = 200
+2020/02/28 16:21:26 10 * 20 = 20000
+2020/02/28 16:21:31 10 * 20 = 200
+2020/02/28 16:21:36 10 * 20 = 200
+2020/02/28 16:21:41 10 * 20 = 200
+2020/02/28 16:21:46 10 * 20 = 200
+2020/02/28 16:21:47 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":false,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":false,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878107592,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:22:56 InitLocalIp, LocalIp:192.168.1.15 
+2020/02/28 16:22:56 [INFO] udp server start, port: 55777
+2020/02/28 16:22:56 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"941325edf5ecbc7636813aafcf8620b3","lastRefTime":1582878176849,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:22:56 [INFO] adding DEFAULT_GROUP@@Arith with test to listener map
+2020/02/28 16:22:56 10 * 20 = 200
+2020/02/28 16:23:01 10 * 20 = 200
+2020/02/28 16:23:06 10 * 20 = 200
+2020/02/28 16:23:08 [INFO] service key:DEFAULT_GROUP@@Arith@@test was updated to:{"dom":"Arith","cacheMillis":3000,"useSpecifiedUrl":false,"hosts":[{"valid":true,"marked":false,"instanceId":"127.0.0.1#8972#test#DEFAULT_GROUP@@Arith","port":8972,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true},{"valid":true,"marked":false,"instanceId":"127.0.0.1#8973#test#DEFAULT_GROUP@@Arith","port":8973,"ip":"127.0.0.1","weight":0,"metadata":{"network":"tcp"},"clusterName":"test","serviceName":"Arith","enabled":true,"healthy":true,"ephemeral":true}],"checksum":"8c657cddf063a7cd054ab5f50a81133f","lastRefTime":1582878188506,"env":"","clusters":"test","metadata":{},"name":"DEFAULT_GROUP@@Arith"} 
+2020/02/28 16:23:11 10 * 20 = 20000
+2020/02/28 16:23:16 10 * 20 = 200
