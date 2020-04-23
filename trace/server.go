@@ -20,7 +20,7 @@ func main() {
 
 	s := server.NewServer()
 
-	traceP := &serverplugin.TracePlugin{}
+	traceP := &serverplugin.OpenTracingPlugin{}
 	//trace.AuthRequest = func(req *http.Request) (any, sensitive bool) { return true, true }
 
 	s.Plugins.Add(traceP)
