@@ -14,7 +14,7 @@ import (
 var (
 	addr     = flag.String("addr", "localhost:8972", "server address")
 	zkAddr   = flag.String("zkAddr", "localhost:2181", "zookeeper address")
-	basePath = flag.String("base", "/rpcx_test", "prefix path")
+	basePath = flag.String("base", "/youpin/services", "prefix path")
 )
 
 func main() {
