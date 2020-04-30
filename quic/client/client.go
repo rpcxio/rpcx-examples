@@ -9,13 +9,21 @@ import (
 	"log"
 	"time"
 
-	example "github.com/rpcx-ecosystem/rpcx-examples3"
 	"github.com/smallnest/rpcx/client"
 )
 
 var (
 	addr = flag.String("addr", "localhost:8972", "server address")
 )
+
+type Args struct {
+	A int
+	B int
+}
+
+type Reply struct {
+	C int
+}
 
 func main() {
 	flag.Parse()
@@ -31,14 +39,14 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 
-	args := &example.Args{
+	args := &Args{
 		A: 10,
 		B: 20,
 	}
 
 	start := time.Now()
 	for i := 0; i < 100000; i++ {
-		reply := &example.Reply{}
+		reply := &Reply{}
 		err := xclient.Call(context.Background(), "Mul", args, reply)
 		if err != nil {
 			log.Fatalf("failed to call: %v", err)
