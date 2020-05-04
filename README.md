@@ -1,6 +1,6 @@
-# Examples for rpcx 3.0
+# Examples for the latest rpcx
 
-A lot of examples for [rpcx](https://github.com/smallnest/rpcx/tree/v3.0) 3.0
+A lot of examples for [rpcx](https://github.com/smallnest/rpcx)
 
 
 ## How to run
