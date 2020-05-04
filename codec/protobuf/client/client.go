@@ -7,7 +7,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/rpcx-ecosystem/rpcx-examples3/codec/protobuf/pb"
+	"github.com/rpcxio/rpcx-examples/codec/protobuf/pb"
 	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/protocol"
 )

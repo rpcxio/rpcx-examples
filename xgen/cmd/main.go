@@ -10,7 +10,7 @@ import (
   metrics "github.com/rcrowley/go-metrics"
   "github.com/smallnest/rpcx/server"
   "github.com/smallnest/rpcx/serverplugin"
-  "github.com/rpcx-ecosystem/rpcx-examples3/xgen"
+  "github.com/rpcxio/rpcx-examples/xgen"
 )
 
 

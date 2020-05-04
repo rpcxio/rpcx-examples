@@ -5,7 +5,7 @@ import (
 	"errors"
 	"flag"
 
-	example "github.com/rpcx-ecosystem/rpcx-examples3"
+	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/server"
 )

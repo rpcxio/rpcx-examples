@@ -1,4 +1,4 @@
-module github.com/rpcx-ecosystem/rpcx-examples3/gomodule
+module github.com/rpcxio/rpcx-examples/gomodule
 
 go 1.14
 

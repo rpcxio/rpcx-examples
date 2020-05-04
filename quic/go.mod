@@ -1,4 +1,4 @@
-module github.com/rpcx-ecosystem/rpcx-examples3/quic
+module github.com/rpcxio/rpcx-examples/quic
 
 go 1.14
 

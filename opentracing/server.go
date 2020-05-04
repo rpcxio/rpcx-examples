@@ -9,7 +9,7 @@ import (
 
 	"github.com/smallnest/rpcx/serverplugin"
 
-	example "github.com/rpcx-ecosystem/rpcx-examples3"
+	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/server"
 
 	opentracing "github.com/opentracing/opentracing-go"

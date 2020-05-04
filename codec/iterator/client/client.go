@@ -7,8 +7,8 @@ import (
 	"flag"
 	"log"
 
-	example "github.com/rpcx-ecosystem/rpcx-examples3"
-	"github.com/rpcx-ecosystem/rpcx-examples3/codec/iterator/codec"
+	example "github.com/rpcxio/rpcx-examples"
+	"github.com/rpcxio/rpcx-examples/codec/iterator/codec"
 	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/protocol"
 	"github.com/smallnest/rpcx/share"

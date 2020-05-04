@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	example "github.com/rpcx-ecosystem/rpcx-examples3"
+	example "github.com/rpcxio/rpcx-examples"
 )
 
 type Arith int
