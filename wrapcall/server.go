@@ -33,9 +33,10 @@ type WrapCall struct{}
 func (p *WrapCall) PreCall(ctx context.Context, serviceName, methodName string, args interface{}) (interface{}, error) {
 	log.Printf("before %s.%s: args: %v", serviceName, methodName, args)
 	if serviceName == "Greeter" && methodName == "Say" {
-		name := args.(string)
-		if name == "jack" {
-			return "rose", nil
+		name := args.(*string)
+		if *name == "jack" {
+			newName := "rose"
+			return &newName, nil
 		}
 	}
 
@@ -45,9 +46,10 @@ func (p *WrapCall) PreCall(ctx context.Context, serviceName, methodName string, 
 func (p *WrapCall) PostCall(ctx context.Context, serviceName, methodName string, args, reply interface{}) (interface{}, error) {
 	log.Printf("after %s.%s: args: %v", serviceName, methodName, args)
 	if serviceName == "Greeter" && methodName == "Say" {
-		name := args.(string)
-		if name == "hello rose!" {
-			return "hello rose!!!", nil
+		name := args.(*string)
+		if *name == "hello rose!" {
+			newReply := "hello rose!!!"
+			return newReply, nil
 		}
 	}
 
