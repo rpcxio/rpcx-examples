@@ -33,3 +33,10 @@ func (t *Arith) Say(ctx context.Context, args *string, reply *string) error {
 	*reply = "hello " + *args
 	return nil
 }
+
+type Greeter struct{}
+
+func (s *Greeter) Say(name string, reply *string) error {
+	*reply = fmt.Sprintf("hello %s!", name)
+	return nil
+}
