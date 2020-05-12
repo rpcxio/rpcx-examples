@@ -25,7 +25,7 @@ func main() {
 	defer xclient.Close()
 
 	var reply string
-	err := xclient.Call(context.Background(), "Say", "jack", reply)
+	err := xclient.Call(context.Background(), "Say", "jack", &reply)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}
