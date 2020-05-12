@@ -49,7 +49,7 @@ func (p *WrapCall) PostCall(ctx context.Context, serviceName, methodName string,
 		name := args.(*string)
 		if *name == "hello rose!" {
 			newReply := "hello rose!!!"
-			return newReply, nil
+			return &newReply, nil
 		}
 	}
 
