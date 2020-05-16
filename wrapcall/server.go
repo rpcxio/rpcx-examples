@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"log"
+	"reflect"
 
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/server"
@@ -31,7 +32,7 @@ func main() {
 type WrapCall struct{}
 
 func (p *WrapCall) PreCall(ctx context.Context, serviceName, methodName string, args interface{}) (interface{}, error) {
-	log.Printf("before %s.%s: args: %v", serviceName, methodName, args)
+	log.Printf("before %s.%s: args: %v", serviceName, methodName, reflect.ValueOf(args).Elem().Interface())
 	if serviceName == "Greeter" && methodName == "Say" {
 		name := args.(*string)
 		if *name == "jack" {
@@ -44,7 +45,7 @@ func (p *WrapCall) PreCall(ctx context.Context, serviceName, methodName string, 
 }
 
 func (p *WrapCall) PostCall(ctx context.Context, serviceName, methodName string, args, reply interface{}) (interface{}, error) {
-	log.Printf("after %s.%s: args: %v", serviceName, methodName, args)
+	log.Printf("after %s.%s: args: %v", serviceName, methodName, reflect.ValueOf(args).Elem().Interface())
 	if serviceName == "Greeter" && methodName == "Say" {
 		name := reply.(*string)
 		if *name == "hello rose!" {
