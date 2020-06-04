@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rpcx-ecosystem/rpcx-gateway"
+	"github.com/rpcxio/rpcx-gateway"
 
 	"github.com/smallnest/rpcx/codec"
 )
