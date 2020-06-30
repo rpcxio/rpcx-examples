@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 
-	"github.com/smallnest/rpcx/serverplugin"
+	"github.com/smallnest/rpcx/share"
 
 	"github.com/smallnest/rpcx/server"
 )
@@ -21,8 +21,8 @@ func main() {
 
 	s := server.NewServer()
 
-	p := serverplugin.NewFileTransfer(*fileTransferAddr, saveFilehandler, nil, 1000)
-	serverplugin.RegisterFileTransfer(s, p)
+	p := server.NewFileTransfer(*fileTransferAddr, saveFilehandler, nil, 1000)
+	s.EnableFileTransfer(share.SendFileServiceName, p)
 
 	err := s.Serve("tcp", *addr)
 	if err != nil {
@@ -30,7 +30,7 @@ func main() {
 	}
 }
 
-func saveFilehandler(conn net.Conn, args *serverplugin.FileTransferArgs) {
+func saveFilehandler(conn net.Conn, args *share.FileTransferArgs) {
 	fmt.Printf("received file name: %s, size: %d\n", args.FileName, args.FileSize)
 	data, err := ioutil.ReadAll(conn)
 	if err != nil {

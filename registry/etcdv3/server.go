@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"log"
+	"net/http"
+	_ "net/http/pprof"
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
@@ -18,6 +20,8 @@ var (
 
 func main() {
 	flag.Parse()
+
+	go http.ListenAndServe(":9981", nil)
 
 	s := server.NewServer()
 	addRegistryPlugin(s)
