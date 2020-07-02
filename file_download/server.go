@@ -7,7 +7,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/smallnest/rpcx/serverplugin"
+	"github.com/smallnest/rpcx/share"
 
 	"github.com/smallnest/rpcx/server"
 )
@@ -22,8 +22,8 @@ func main() {
 
 	s := server.NewServer()
 
-	p := serverplugin.NewFileTransfer(*fileTransferAddr, nil, downloadFilehandler, 1000)
-	serverplugin.RegisterFileTransfer(s, p)
+	p := server.NewFileTransfer(*fileTransferAddr, nil, downloadFilehandler, 1000)
+	s.EnableFileTransfer(share.SendFileServiceName, p)
 
 	err := s.Serve("tcp", *addr)
 	if err != nil {
@@ -31,7 +31,7 @@ func main() {
 	}
 }
 
-func downloadFilehandler(conn net.Conn, args *serverplugin.DownloadFileArgs) {
+func downloadFilehandler(conn net.Conn, args *share.DownloadFileArgs) {
 	fmt.Printf("received file name: %s\n", args.FileName)
 
 	f, err := os.Open("abc.txt")
