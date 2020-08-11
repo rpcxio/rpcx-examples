@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	addr = flag.String("addr", "localhost:8972", "server address")
+	addr = flag.String("addr", "[::1]:8972", "server address")
 )
 
 func main() {
@@ -30,14 +30,12 @@ func main() {
 		B: 20,
 	}
 
-	for {
-		reply := &example.Reply{}
-		err := xclient.Call(context.Background(), "Mul", args, reply)
-		if err != nil {
-			log.Fatalf("failed to call: %v", err)
-		}
-
-		//log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+	reply := &example.Reply{}
+	err := xclient.Call(context.Background(), "Mul", args, reply)
+	if err != nil {
+		log.Fatalf("failed to call: %v", err)
 	}
+
+	log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 
 }
