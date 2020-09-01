@@ -20,7 +20,7 @@ func main() {
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 
 	option := client.DefaultOption
-	option.ReadTimeout = 3 * time.Second
+	option.IdleTimeout = 3 * time.Second
 
 	xclient := client.NewXClient("Arith", client.Failfast, client.RandomSelect, d, option)
 	defer xclient.Close()
