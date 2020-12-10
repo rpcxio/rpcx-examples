@@ -22,6 +22,8 @@ func main() {
 	option := client.DefaultOption
 	option.Heartbeat = true
 	option.HeartbeatInterval = time.Second
+	option.MaxWaitForHeartbeat = 2 * time.Second
+	option.IdleTimeout = 3 * time.Second
 
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
