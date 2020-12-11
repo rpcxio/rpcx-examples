@@ -12,6 +12,7 @@ import (
 
 var (
 	addr = flag.String("addr", "localhost:8972", "server address")
+	hb   = flag.Bool("hb", true, "enable heartbeat or not")
 )
 
 func main() {
@@ -20,7 +21,7 @@ func main() {
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 
 	option := client.DefaultOption
-	option.Heartbeat = true
+	option.Heartbeat = *hb
 	option.HeartbeatInterval = time.Second
 	option.MaxWaitForHeartbeat = 2 * time.Second
 	option.IdleTimeout = 3 * time.Second
@@ -42,7 +43,7 @@ func main() {
 
 		log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 
-		time.Sleep(time.Minute)
+		time.Sleep(10 * time.Second)
 	}
 
 }

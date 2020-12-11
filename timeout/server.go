@@ -16,7 +16,7 @@ var (
 type Arith int
 
 func (t *Arith) Mul(ctx context.Context, args *example.Args, reply *example.Reply) error {
-	time.Sleep(time.Duration(args.A) * time.Second)
+	time.Sleep(12 * time.Second)
 	reply.C = args.A * args.B
 	return nil
 }
