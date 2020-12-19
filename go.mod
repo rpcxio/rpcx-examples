@@ -21,7 +21,7 @@ require (
 	github.com/rpcxio/rpcx-gateway v0.0.0-20200521025828-a39934d3752d
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/smallnest/libkv-etcdv3-store v1.1.9 // indirect
-	github.com/smallnest/rpcx v0.0.0-20201211065410-ee13ef5d3696
+	github.com/smallnest/rpcx v0.0.0-20201219143309-0f9c4ab78617
 	github.com/smallnest/valkeyrie v0.0.0-20200811110245-15a06a9896aa // indirect
 	github.com/spf13/cobra v1.0.0 // indirect
 	github.com/tatsushid/go-fastping v0.0.0-20160109021039-d7bb493dee3e // indirect

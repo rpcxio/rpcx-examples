@@ -4,7 +4,6 @@ import (
 	"context"
 	"flag"
 	"log"
-	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
@@ -20,7 +19,6 @@ func main() {
 	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 
 	option := client.DefaultOption
-	option.ReadTimeout = 10 * time.Second
 
 	xclient := client.NewXClient("a.b.c.D", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
