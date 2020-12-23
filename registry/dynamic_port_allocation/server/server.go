@@ -6,9 +6,9 @@ import (
 	"time"
 
 	metrics "github.com/rcrowley/go-metrics"
+	"github.com/rpcxio/rpcx-etcd/serverplugin"
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/server"
-	"github.com/smallnest/rpcx/serverplugin"
 )
 
 var (
