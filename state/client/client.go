@@ -18,7 +18,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2, Value: "state=inactive"}})
+	d, _ := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2, Value: "state=inactive"}})
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 

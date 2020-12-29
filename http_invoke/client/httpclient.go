@@ -6,9 +6,21 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rpcxio/rpcx-gateway"
-
 	"github.com/smallnest/rpcx/codec"
+)
+
+const (
+	XVersion           = "X-RPCX-Version"
+	XMessageType       = "X-RPCX-MesssageType"
+	XHeartbeat         = "X-RPCX-Heartbeat"
+	XOneway            = "X-RPCX-Oneway"
+	XMessageStatusType = "X-RPCX-MessageStatusType"
+	XSerializeType     = "X-RPCX-SerializeType"
+	XMessageID         = "X-RPCX-MessageID"
+	XServicePath       = "X-RPCX-ServicePath"
+	XServiceMethod     = "X-RPCX-ServiceMethod"
+	XMeta              = "X-RPCX-Meta"
+	XErrorMessage      = "X-RPCX-ErrorMessage"
 )
 
 type Args struct {
@@ -37,11 +49,11 @@ func main() {
 	}
 
 	h := req.Header
-	h.Set(gateway.XMessageID, "10000")
-	h.Set(gateway.XMessageType, "0")
-	h.Set(gateway.XSerializeType, "3")
-	h.Set(gateway.XServicePath, "Arith")
-	h.Set(gateway.XServiceMethod, "Mul")
+	h.Set(XMessageID, "10000")
+	h.Set(XMessageType, "0")
+	h.Set(XSerializeType, "3")
+	h.Set(XServicePath, "Arith")
+	h.Set(XServiceMethod, "Mul")
 
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {

@@ -25,7 +25,7 @@ func main() {
 	option := client.DefaultOption
 	option.SerializeType = protocol.SerializeType(4)
 
-	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 

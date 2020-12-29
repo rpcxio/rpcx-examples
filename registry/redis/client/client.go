@@ -18,7 +18,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewRedisDiscovery(*basePath, "Arith", []string{*redisAddr}, nil)
+	d, _ := client.NewRedisDiscovery(*basePath, "Arith", []string{*redisAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 

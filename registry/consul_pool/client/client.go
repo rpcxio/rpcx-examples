@@ -20,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	clientPool := sync.Pool{New: func() interface{} {
-		d := client.NewConsulDiscovery(*basePath, "Arith", []string{*consulAddr}, nil)
+		d, _ := client.NewConsulDiscovery(*basePath, "Arith", []string{*consulAddr}, nil)
 		xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 		return xclient
 	}}

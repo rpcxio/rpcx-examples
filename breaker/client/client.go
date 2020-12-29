@@ -23,7 +23,7 @@ func main() {
 	// if failed 5 times, return error immediately, and will try to connect after 30 seconds
 	option.GenBreaker = func() client.Breaker { return client.NewConsecCircuitBreaker(5, 30*time.Second) }
 
-	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
+	d, _ := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2}})
 	option.Retries = 10
 	xclient := client.NewXClient("Arith", client.Failfast, client.RandomSelect, d, option)
 	defer xclient.Close()

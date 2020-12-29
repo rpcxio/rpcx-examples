@@ -18,7 +18,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2, Value: "group=test"}})
+	d, _ := client.NewMultipleServersDiscovery([]*client.KVPair{{Key: *addr1}, {Key: *addr2, Value: "group=test"}})
 	option := client.DefaultOption
 	option.Group = "test"
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, option)

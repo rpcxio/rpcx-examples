@@ -25,7 +25,7 @@ func main() {
 	tracer := mocktracer.New()
 	opentracing.SetGlobalTracer(tracer)
 
-	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 	option := client.DefaultOption
 
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)

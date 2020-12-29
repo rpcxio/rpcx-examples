@@ -35,7 +35,7 @@ func main() {
 	option := client.DefaultOption
 	option.TLSConfig = conf
 
-	d := client.NewPeer2PeerDiscovery("quic@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("quic@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, option)
 	defer xclient.Close()
 

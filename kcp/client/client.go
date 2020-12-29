@@ -31,7 +31,7 @@ func main() {
 	option := client.DefaultOption
 	option.Block = bc
 
-	d := client.NewPeer2PeerDiscovery("kcp@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("kcp@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RoundRobin, d, option)
 	defer xclient.Close()
 

@@ -22,7 +22,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, nil)
+	d, _ := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 

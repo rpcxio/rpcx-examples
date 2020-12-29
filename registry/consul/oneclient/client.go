@@ -18,7 +18,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewConsulDiscoveryTemplate(*basePath, []string{*consulAddr}, nil)
+	d, _ := client.NewConsulDiscoveryTemplate(*basePath, []string{*consulAddr}, nil)
 	oneClient := client.NewOneClient(client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer oneClient.Close()
 

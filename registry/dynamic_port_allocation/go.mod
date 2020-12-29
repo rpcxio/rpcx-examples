@@ -4,9 +4,10 @@ go 1.15
 
 require (
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
-	github.com/rpcxio/rpcx-etcd v0.0.0-20201223114009-7e3fe9c7ae7e
+	github.com/rpcxio/rpcx-etcd v0.0.0-20201229103411-8317fc934fbb
 	github.com/rpcxio/rpcx-examples v1.1.6
-	github.com/smallnest/rpcx v0.0.0-20201223122003-ca98a3ecb90c
+	github.com/smallnest/rpcx v0.0.0-20201229103109-20b35e5375d1
+	google.golang.org/grpc v1.34.0 // indirect
 )
 
 replace (

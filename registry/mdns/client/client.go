@@ -17,7 +17,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewMDNSDiscovery("Arith", 10*time.Second, 10*time.Second, "")
+	d, _ := client.NewMDNSDiscovery("Arith", 10*time.Second, 10*time.Second, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

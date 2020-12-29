@@ -14,7 +14,7 @@ import (
 func main() {
 	flag.Parse()
 
-	d := configNacos()
+	d, _ := configNacos()
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 
@@ -38,7 +38,7 @@ func main() {
 	}
 }
 
-func configNacos() client.ServiceDiscovery {
+func configNacos() (client.ServiceDiscovery, error) {
 	clientConfig := constant.ClientConfig{
 		TimeoutMs:            10 * 1000,
 		ListenInterval:       30 * 1000,

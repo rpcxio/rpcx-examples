@@ -16,7 +16,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d := client.NewPeer2PeerDiscovery("unix@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("unix@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

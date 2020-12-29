@@ -19,7 +19,7 @@ type Arith struct{}
 // the second parameter is not a pointer
 func (t *Arith) Mul(ctx context.Context, args example.Args, reply *example.Reply) error {
 
-	d := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
+	d, _ := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
