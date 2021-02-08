@@ -7,10 +7,10 @@ import (
 
 	"github.com/kr/pretty"
 
-	"github.com/smallnest/rpcx/v6/serverplugin"
+	"github.com/smallnest/rpcx/serverplugin"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/mocktracer"

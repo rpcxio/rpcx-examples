@@ -4,8 +4,8 @@ import (
 	"flag"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/reflection"
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/reflection"
+	"github.com/smallnest/rpcx/server"
 )
 
 var (

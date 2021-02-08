@@ -5,8 +5,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/smallnest/rpcx/v6/client"
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/share"
 )
 
 var (
@@ -20,7 +20,7 @@ func main() {
 	xclient := client.NewXClient(share.SendFileServiceName, client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
-	err := xclient.SendFile(context.Background(), "abc.txt", 0)
+	err := xclient.SendFile(context.Background(), "abc.txt", 0, map[string]string{"foo": "bar"})
 	if err != nil {
 		panic(err)
 	}

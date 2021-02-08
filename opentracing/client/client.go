@@ -8,10 +8,10 @@ import (
 	"github.com/kr/pretty"
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/mocktracer"
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/share"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 var (

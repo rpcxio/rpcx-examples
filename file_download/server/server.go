@@ -7,9 +7,9 @@ import (
 	"net"
 	"os"
 
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/share"
 
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 )
 
 var (
@@ -32,7 +32,7 @@ func main() {
 }
 
 func downloadFilehandler(conn net.Conn, args *share.DownloadFileArgs) {
-	fmt.Printf("received file name: %s\n", args.FileName)
+	fmt.Printf("received file name: %s, meta: %v\n", args.FileName, args.Meta)
 
 	f, err := os.Open("abc.txt")
 	if err != nil {

@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/share"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 var (

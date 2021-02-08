@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/rpcxio/rpcx-examples/codec/protobuf/pb"
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 )
 
 var (

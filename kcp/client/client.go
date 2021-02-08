@@ -11,7 +11,7 @@ import (
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 	kcp "github.com/xtaci/kcp-go"
 	"golang.org/x/crypto/pbkdf2"
 )

@@ -8,7 +8,7 @@ import (
 
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 func main() {

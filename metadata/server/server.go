@@ -5,10 +5,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/share"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 )
 
 var (

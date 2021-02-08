@@ -8,8 +8,8 @@ import (
 	"log"
 
 	"github.com/rpcxio/rpcx-examples/codec/protobuf/pb"
-	"github.com/smallnest/rpcx/v6/client"
-	"github.com/smallnest/rpcx/v6/protocol"
+	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/protocol"
 )
 
 var (

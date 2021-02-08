@@ -11,7 +11,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 var (

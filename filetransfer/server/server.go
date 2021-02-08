@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net"
 
-	"github.com/smallnest/rpcx/v6/share"
+	"github.com/smallnest/rpcx/share"
 
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 )
 
 var (
@@ -31,7 +31,7 @@ func main() {
 }
 
 func saveFilehandler(conn net.Conn, args *share.FileTransferArgs) {
-	fmt.Printf("received file name: %s, size: %d\n", args.FileName, args.FileSize)
+	fmt.Printf("received file name: %s, size: %d, meta: %v\n", args.FileName, args.FileSize, args.Meta)
 	data, err := ioutil.ReadAll(conn)
 	if err != nil {
 		fmt.Printf("error read: %v\n", err)

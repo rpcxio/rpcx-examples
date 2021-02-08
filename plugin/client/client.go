@@ -9,7 +9,7 @@ import (
 	_ "net/http/pprof"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 var (

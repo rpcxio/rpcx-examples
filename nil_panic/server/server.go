@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 
-	"github.com/smallnest/rpcx/v6/server"
+	"github.com/smallnest/rpcx/server"
 )
 
 type Args struct {

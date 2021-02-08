@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/smallnest/rpcx/v6/codec"
+	"github.com/smallnest/rpcx/codec"
 )
 
 const (

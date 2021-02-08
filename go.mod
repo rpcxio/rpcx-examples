@@ -13,7 +13,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/peterbourgon/g2s v0.0.0-20140925154142-ec76db4c1ac1 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
-	github.com/smallnest/rpcx v0.0.0-20210208114757-55f72b32678f
+	github.com/smallnest/rpcx v0.0.0-20210208120013-629cb27b4afb
 	github.com/templexxx/cpufeat v0.0.0-20180720151539-5901679d5808 // indirect
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
 	github.com/tjfoc/gmsm v1.3.2 // indirect

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/smallnest/rpcx/v6/client"
-	"github.com/smallnest/rpcx/v6/protocol"
+	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/protocol"
 )
 
 var (

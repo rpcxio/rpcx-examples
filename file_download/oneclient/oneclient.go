@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/client"
 )
 
 var (
@@ -26,7 +26,7 @@ func main() {
 	}
 	defer f.Close()
 
-	err = oneClient.DownloadFile(context.Background(), "abc.txt", f)
+	err = oneClient.DownloadFile(context.Background(), "abc.txt", f, map[string]string{"foo": "bar"})
 	if err != nil {
 		panic(err)
 	}
