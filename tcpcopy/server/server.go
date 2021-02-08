@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/smallnest/rpcx/serverplugin"
+	"github.com/smallnest/rpcx/v6/serverplugin"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/server"
+	"github.com/smallnest/rpcx/v6/server"
 )
 
 var addr = flag.String("addr", "localhost:8972", "server address")

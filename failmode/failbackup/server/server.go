@@ -6,7 +6,7 @@ import (
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/server"
+	"github.com/smallnest/rpcx/v6/server"
 )
 
 var (

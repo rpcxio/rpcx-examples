@@ -7,7 +7,7 @@ import (
 	"net"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/server"
+	"github.com/smallnest/rpcx/v6/server"
 	kcp "github.com/xtaci/kcp-go"
 	"golang.org/x/crypto/pbkdf2"
 )

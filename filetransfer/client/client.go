@@ -5,8 +5,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/smallnest/rpcx/client"
-	"github.com/smallnest/rpcx/share"
+	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/v6/share"
 )
 
 var (

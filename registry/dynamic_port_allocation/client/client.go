@@ -8,7 +8,7 @@ import (
 
 	etcd_client "github.com/rpcxio/rpcx-etcd/client"
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/v6/client"
 )
 
 var (

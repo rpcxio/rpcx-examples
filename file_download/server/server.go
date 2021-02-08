@@ -7,9 +7,9 @@ import (
 	"net"
 	"os"
 
-	"github.com/smallnest/rpcx/share"
+	"github.com/smallnest/rpcx/v6/share"
 
-	"github.com/smallnest/rpcx/server"
+	"github.com/smallnest/rpcx/v6/server"
 )
 
 var (

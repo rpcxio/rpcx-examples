@@ -1,12 +1,13 @@
-//go run -tags quic server.go
+//go run -tags quic .
 package main
 
 import (
 	"crypto/tls"
+	"crypto/x509"
 	"flag"
-	"log"
+	"io/ioutil"
 
-	"github.com/smallnest/rpcx/server"
+	"github.com/smallnest/rpcx/v6/server"
 )
 
 var (
@@ -16,13 +17,27 @@ var (
 func main() {
 	flag.Parse()
 
-	cert, err := tls.LoadX509KeyPair("server.pem", "server.key")
+	//CA
+	caCertPEM, err := ioutil.ReadFile("../ca.pem")
 	if err != nil {
-		log.Print(err)
-		return
+		panic(err)
 	}
 
-	config := &tls.Config{Certificates: []tls.Certificate{cert}}
+	roots := x509.NewCertPool()
+	ok := roots.AppendCertsFromPEM(caCertPEM)
+	if !ok {
+		panic("failed to parse root certificate")
+	}
+
+	cert, err := tls.LoadX509KeyPair("server.pem", "server.key")
+	if err != nil {
+		panic(err)
+	}
+
+	config := &tls.Config{
+		Certificates: []tls.Certificate{cert},
+		RootCAs:      roots,
+	}
 
 	s := server.NewServer(server.WithTLSConfig(config))
 	s.RegisterName("Arith", new(Arith), "")

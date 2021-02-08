@@ -7,8 +7,8 @@ import (
 	"log"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/client"
-	"github.com/smallnest/rpcx/protocol"
+	"github.com/smallnest/rpcx/v6/client"
+	"github.com/smallnest/rpcx/v6/protocol"
 )
 
 var (

@@ -4,16 +4,18 @@ package main
 import (
 	"context"
 	"crypto/tls"
+	"crypto/x509"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"time"
 
-	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/v6/client"
 )
 
 var (
-	addr = flag.String("addr", "localhost:8972", "server address")
+	addr = flag.String("addr", "127.0.0.1:8972", "server address")
 )
 
 type Args struct {
@@ -28,8 +30,21 @@ type Reply struct {
 func main() {
 	flag.Parse()
 
+	// CA
+	caCertPEM, err := ioutil.ReadFile("../ca.pem")
+	if err != nil {
+		panic(err)
+	}
+
+	roots := x509.NewCertPool()
+	ok := roots.AppendCertsFromPEM(caCertPEM)
+	if !ok {
+		panic("failed to parse root certificate")
+	}
+
 	conf := &tls.Config{
-		InsecureSkipVerify: true,
+		// InsecureSkipVerify: true,
+		RootCAs: roots,
 	}
 
 	option := client.DefaultOption
