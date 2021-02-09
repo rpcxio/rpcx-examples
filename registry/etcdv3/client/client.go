@@ -6,10 +6,9 @@ import (
 	"log"
 	"time"
 
+	etcd_client "github.com/rpcxio/rpcx-etcd/client"
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
-	etcd_client "github.com/rpcxio/rpcx-etcd/client"
-)
 )
 
 var (
@@ -20,7 +19,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d,_ := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, nil)
+	d, _ := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 
@@ -42,5 +41,4 @@ func main() {
 
 		time.Sleep(5 * time.Second)
 	}
-
 }
