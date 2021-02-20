@@ -28,11 +28,10 @@ func main() {
 		B: 20,
 	}
 
-	reply := &example.Reply{}
-	err := xclient.Call(context.Background(), "Mul", args, reply)
+	err := xclient.Call(context.Background(), "Mul", args, nil)
 	if err != nil {
 		log.Fatalf("failed to call: %v", err)
 	}
 
-	log.Printf("%d * %d = %d", args.A, args.B, reply.C)
+	log.Printf("%d * %d = nil", args.A, args.B)
 }
