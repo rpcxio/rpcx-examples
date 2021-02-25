@@ -372,6 +372,10 @@ github.com/smallnest/rpcx v0.0.0-20210209114709-19588590babb h1:E+of/LBdjll+L3WI
 github.com/smallnest/rpcx v0.0.0-20210209114709-19588590babb/go.mod h1:U4+AmbJ3rJZ4/SuyAFRXox8ejcryoikKgXMzvbxM3sI=
 github.com/smallnest/rpcx v0.0.0-20210219130000-031af6a9dc4c h1:jfOK6knuWfOG9FqKI9gkQksVclAI6OceMdZ6w9yuVjo=
 github.com/smallnest/rpcx v0.0.0-20210219130000-031af6a9dc4c/go.mod h1:U4+AmbJ3rJZ4/SuyAFRXox8ejcryoikKgXMzvbxM3sI=
+github.com/smallnest/rpcx v0.0.0-20210223120554-601b591866e5 h1:EzEtlw8mMux12XOdP+cX1BdSbl1IPCCficuzZ7mkUmE=
+github.com/smallnest/rpcx v0.0.0-20210223120554-601b591866e5/go.mod h1:1KXw0wD4A60UzDcx45vjRbwJKdC4hLVnVvQ40cMhKJw=
+github.com/smallnest/rpcx v0.0.0-20210225012836-75a1fadd8302 h1:lOl6N8cIpDk1tc38SdVpJUTm4dKrxZ4xJ9J77rRbaZE=
+github.com/smallnest/rpcx v0.0.0-20210225012836-75a1fadd8302/go.mod h1:1KXw0wD4A60UzDcx45vjRbwJKdC4hLVnVvQ40cMhKJw=
 github.com/smallnest/rpcx/v6 v6.0.1 h1:O6fCa2ydUVVb4/32RYS4cdLT4tFaz0M+8jIyCj9FH0s=
 github.com/smallnest/rpcx/v6 v6.0.1/go.mod h1:zzO7K1jCOIioZrzL12Y5bqGZqLtiPQsSxkZteJ+1/gQ=
 github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d h1:zE9ykElWQ6/NYmHa3jpm/yHnI4xSofP+UP6SpjHcSeM=
@@ -408,6 +412,8 @@ github.com/viant/assertly v0.4.8/go.mod h1:aGifi++jvCrUaklKEKT0BU95igDNaqkvz+49u
 github.com/viant/toolbox v0.24.0/go.mod h1:OxMCG57V0PXuIP2HNQrtJf2CjqdmbrOx5EkMILuUhzM=
 github.com/vmihailenco/msgpack v4.0.0+incompatible h1:R/ftCULcY/r0SLpalySUSd8QV4fVABi/h0D/IjlYJzg=
 github.com/vmihailenco/msgpack v4.0.0+incompatible/go.mod h1:fy3FlTQTDXWkZ7Bh6AcGMlsjHatGryHQYUTf1ShIgkk=
+github.com/vmihailenco/msgpack/v5 v5.2.0/go.mod h1:fEM7KuHcnm0GvDCztRpw9hV0PuoO2ciTismP6vjggcM=
+github.com/vmihailenco/tagparser/v2 v2.0.0/go.mod h1:Wri+At7QHww0WTrCBeu4J6bNtoV6mEfg5OIWRZA9qds=
 github.com/xtaci/kcp-go v2.0.3+incompatible/go.mod h1:bN6vIwHQbfHaHtFpEssmWsN45a+AZwO7eyRCmEIbtvE=
 github.com/xtaci/kcp-go v5.4.20+incompatible h1:TN1uey3Raw0sTz0Fg8GkfM0uH3YwzhnZWQ1bABv5xAg=
 github.com/xtaci/kcp-go v5.4.20+incompatible/go.mod h1:bN6vIwHQbfHaHtFpEssmWsN45a+AZwO7eyRCmEIbtvE=
