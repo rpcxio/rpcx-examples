@@ -6,7 +6,7 @@ require (
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
 	github.com/rpcxio/rpcx-etcd v0.0.0-20201229103411-8317fc934fbb
 	github.com/rpcxio/rpcx-examples v1.1.6
-	github.com/smallnest/rpcx v0.0.0-20210312061609-a54ce6558688
+	github.com/smallnest/rpcx v0.0.0-20210321090138-475481d3b37b
 	google.golang.org/grpc v1.34.0 // indirect
 )
 
