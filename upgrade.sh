@@ -1,6 +1,6 @@
 #! /bin/sh
 
-version=475481d3b37b454b60014a09b5202f801c1c4291
+version=c584448849f9173a81d8d0a8a0e305bffd920629
 
 go get -v github.com/smallnest/rpcx@$version
 

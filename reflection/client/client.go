@@ -8,9 +8,7 @@ import (
 	"github.com/smallnest/rpcx/client"
 )
 
-var (
-	addr = flag.String("addr", "localhost:8972", "server address")
-)
+var addr = flag.String("addr", "localhost:8972", "server address")
 
 func main() {
 	flag.Parse()
@@ -24,6 +22,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Printf("all registered service Arith: \n%s\n", reply)
 
-	fmt.Printf("all registered services: %s\n", reply)
+	err = xclient.Call(context.Background(), "GetServices", "ass", &reply)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("all registered services: \n%s\n", reply)
 }
