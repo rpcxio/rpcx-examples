@@ -485,6 +485,10 @@ github.com/smallnest/rpcx v0.0.0-20210321090138-475481d3b37b h1:EMzvan6twxqKwUxp
 github.com/smallnest/rpcx v0.0.0-20210321090138-475481d3b37b/go.mod h1:XX9mOD6BquAvkGeiZMTIXnB8vp6OSTAkt4Att+eTKZo=
 github.com/smallnest/rpcx v0.0.0-20210329112732-c584448849f9 h1:2X+wWYbm8DZ3/mjhlONMSAUF9c0JetlZvzDUF+xVWS0=
 github.com/smallnest/rpcx v0.0.0-20210329112732-c584448849f9/go.mod h1:XX9mOD6BquAvkGeiZMTIXnB8vp6OSTAkt4Att+eTKZo=
+github.com/smallnest/rpcx v0.0.0-20210330125251-2b8912d3c61d h1:l4g/la3T9kYQvSRHr+VoI1PqiQ8FsIkdCFSa21AOVfQ=
+github.com/smallnest/rpcx v0.0.0-20210330125251-2b8912d3c61d/go.mod h1:8bfbEqmXsovu5pUEfMPja/SmQMh3JqZkUMoFGHQ2+xA=
+github.com/smallnest/rpcx v0.0.0-20210331003305-6021c0065664 h1:eB/cn779BLfdOGvJPVGqCpNoQAHW95B09dDd27xajAY=
+github.com/smallnest/rpcx v0.0.0-20210331003305-6021c0065664/go.mod h1:8bfbEqmXsovu5pUEfMPja/SmQMh3JqZkUMoFGHQ2+xA=
 github.com/smallnest/rpcx/v6 v6.0.1 h1:O6fCa2ydUVVb4/32RYS4cdLT4tFaz0M+8jIyCj9FH0s=
 github.com/smallnest/rpcx/v6 v6.0.1/go.mod h1:zzO7K1jCOIioZrzL12Y5bqGZqLtiPQsSxkZteJ+1/gQ=
 github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d h1:zE9ykElWQ6/NYmHa3jpm/yHnI4xSofP+UP6SpjHcSeM=

@@ -13,7 +13,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/peterbourgon/g2s v0.0.0-20140925154142-ec76db4c1ac1 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
-	github.com/smallnest/rpcx v0.0.0-20210329112732-c584448849f9
+	github.com/smallnest/rpcx v0.0.0-20210331003305-6021c0065664
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
 	github.com/vmihailenco/msgpack v4.0.0+incompatible // indirect
 	github.com/xtaci/kcp-go v5.4.20+incompatible
