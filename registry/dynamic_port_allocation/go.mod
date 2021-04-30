@@ -33,12 +33,11 @@ require (
 	github.com/psampaz/go-mod-outdated v0.7.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
 	github.com/rivo/uniseg v0.2.0 // indirect
-	github.com/rpcxio/libkv v0.5.0 // indirect
 	github.com/rpcxio/rpcx-etcd v0.0.0-20210408131901-67fd64750268 // indirect
 	github.com/rpcxio/rpcx-examples v1.1.6
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/smallnest/libkv-etcdv3-store v1.1.1 // indirect
-	github.com/smallnest/rpcx v1.6.2
+	github.com/smallnest/rpcx v1.6.3-0.20210426142302-97437a82168d
 	github.com/smallnest/valkeyrie v0.0.0-20191030065038-13edeca3d026 // indirect
 	github.com/syndtr/goleveldb v1.0.0 // indirect
 	github.com/tatsushid/go-fastping v0.0.0-20160109021039-d7bb493dee3e // indirect
