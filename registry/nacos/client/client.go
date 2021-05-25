@@ -8,6 +8,7 @@ import (
 
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
+	nclient "github.com/rpcxio/rpcx-nacus/client"
 	"github.com/smallnest/rpcx/client"
 )
 
@@ -56,6 +57,6 @@ func configNacos() (client.ServiceDiscovery, error) {
 		Port:   80,
 	}}
 
-	return client.NewNacosDiscovery("Arith", "test", clientConfig, serverConfig)
+	return nclient.NewNacosDiscovery("Arith", "test", clientConfig, serverConfig)
 
 }

@@ -6,8 +6,8 @@ import (
 
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
+	nserverplugin "github.com/rpcxio/rpcx-nacus/serverplugin"
 	"github.com/smallnest/rpcx/server"
-	"github.com/smallnest/rpcx/serverplugin"
 )
 
 var (
@@ -45,7 +45,7 @@ func addRegistryPlugin(s *server.Server) {
 		Port:   80,
 	}}
 
-	r := &serverplugin.NacosRegisterPlugin{
+	r := &nserverplugin.NacosRegisterPlugin{
 		ServiceAddress: "tcp@" + *addr,
 		ClientConfig:   clientConfig,
 		ServerConfig:   serverConfig,
