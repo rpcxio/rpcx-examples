@@ -345,6 +345,8 @@ github.com/modern-go/reflect2 v1.0.1 h1:9f412s+6RmYXLWZSEzVVgPGK7C2PphHj5RJrvfx9
 github.com/modern-go/reflect2 v1.0.1/go.mod h1:bx2lNnkwVCuqBIxFjflWJWanXIb3RllmbCylyMrvgv0=
 github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223 h1:F9x/1yl3T2AeKLr2AMdilSD8+f9bvMnNN8VS5iDtovc=
 github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223/go.mod h1:qRWi+5nqEBWmkhHvq77mSJWrCKwh8bxhgT7d/eI7P4U=
+github.com/nacos-group/nacos-sdk-go v1.0.7 h1:Am1tJFe7GUTNCREKsZ5ok0H2OspHDRmRcsxn7DiSwhA=
+github.com/nacos-group/nacos-sdk-go v1.0.7/go.mod h1:hlAPn3UdzlxIlSILAyOXKxjFSvDJ9oLzTJ9hLAK1KzA=
 github.com/nacos-group/nacos-sdk-go v1.0.8-0.20210523140303-b718836ea4cc h1:kCUpX7NrtiiqgFxSorH4e5JNBaeWZIM9w/u8x/SxQkk=
 github.com/nacos-group/nacos-sdk-go v1.0.8-0.20210523140303-b718836ea4cc/go.mod h1:MNfzFtjJlF8OkXa7svGYVg0yxkmE4ycLr95mK1rIPug=
 github.com/neelance/astrewrite v0.0.0-20160511093645-99348263ae86 h1:D6paGObi5Wud7xg83MaEFyjxQB1W5bz5d0IFppr+ymk=
@@ -414,6 +416,8 @@ github.com/rpcxio/libkv v0.5.1-0.20210420120011-1fceaedca8a5 h1:oGficf/KJp1y22zT
 github.com/rpcxio/libkv v0.5.1-0.20210420120011-1fceaedca8a5/go.mod h1:zHGgtLr3cFhGtbalum0BrMPOjhFZFJXCKiws/25ewls=
 github.com/rpcxio/rpcx-nacos v0.0.0-20210525014705-246586922b24 h1:jy1wCx9cU3fa6Ve7WNE7yrY80RcuADqITDH1rqPwG7w=
 github.com/rpcxio/rpcx-nacos v0.0.0-20210525014705-246586922b24/go.mod h1:x6Zq+KTTPfspVOA0BWoT/aIKc9WzPOepX5La5PQVxBk=
+github.com/rpcxio/rpcx-nacos v0.0.0-20210525063414-e99e0c81ae30 h1:yR4YtXhuDzCo0EwKWthHs0CShAitSrxDhB37XLQtzB4=
+github.com/rpcxio/rpcx-nacos v0.0.0-20210525063414-e99e0c81ae30/go.mod h1:eOfJSY4d25i6XmjbTTD0ezleW9B2n3S3FwC1RCHp68Y=
 github.com/rs/cors v1.7.0 h1:+88SsELBHx5r+hZ8TCkggzSstaWNbDvThkVK8H6f9ik=
 github.com/rs/cors v1.7.0/go.mod h1:gFx+x8UowdsKA9AchylcLynDq+nNFfI8FkUZdN/jGCU=
 github.com/rubyist/circuitbreaker v2.2.1+incompatible h1:KUKd/pV8Geg77+8LNDwdow6rVCAYOp8+kHUyFvL6Mhk=
