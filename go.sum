@@ -412,8 +412,8 @@ github.com/rogpeppe/go-internal v1.3.0 h1:RR9dF3JtopPvtkroDZuVD7qquD0bnHlKSqaQhg
 github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rpcxio/libkv v0.5.1-0.20210420120011-1fceaedca8a5 h1:oGficf/KJp1y22zTpjjCRtjtNM9QRjww3fqyQPLgypg=
 github.com/rpcxio/libkv v0.5.1-0.20210420120011-1fceaedca8a5/go.mod h1:zHGgtLr3cFhGtbalum0BrMPOjhFZFJXCKiws/25ewls=
-github.com/rpcxio/rpcx-nacus v0.0.0-20210525001214-d0ce4d25eef5 h1:lqVbr6UFverR+PcgK2/QTwRzvXZzV729vKtVi+2MVdM=
-github.com/rpcxio/rpcx-nacus v0.0.0-20210525001214-d0ce4d25eef5/go.mod h1:AT9/nXsAFqzP0K3CTh+8AdtveChWW7fNKlrWQ5YGGuo=
+github.com/rpcxio/rpcx-nacos v0.0.0-20210525014705-246586922b24 h1:jy1wCx9cU3fa6Ve7WNE7yrY80RcuADqITDH1rqPwG7w=
+github.com/rpcxio/rpcx-nacos v0.0.0-20210525014705-246586922b24/go.mod h1:x6Zq+KTTPfspVOA0BWoT/aIKc9WzPOepX5La5PQVxBk=
 github.com/rs/cors v1.7.0 h1:+88SsELBHx5r+hZ8TCkggzSstaWNbDvThkVK8H6f9ik=
 github.com/rs/cors v1.7.0/go.mod h1:gFx+x8UowdsKA9AchylcLynDq+nNFfI8FkUZdN/jGCU=
 github.com/rubyist/circuitbreaker v2.2.1+incompatible h1:KUKd/pV8Geg77+8LNDwdow6rVCAYOp8+kHUyFvL6Mhk=

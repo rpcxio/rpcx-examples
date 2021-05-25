@@ -11,7 +11,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
-	github.com/rpcxio/rpcx-nacus v0.0.0-20210525001214-d0ce4d25eef5
+	github.com/rpcxio/rpcx-nacos v0.0.0-20210525014705-246586922b24 // indirect
 	github.com/smallnest/rpcx v1.6.3-0.20210525000116-aa5ac9f6ae24
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
 	github.com/vmihailenco/msgpack v4.0.0+incompatible // indirect

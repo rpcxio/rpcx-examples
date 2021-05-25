@@ -6,13 +6,11 @@ import (
 
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
-	nserverplugin "github.com/rpcxio/rpcx-nacus/serverplugin"
+	nserverplugin "github.com/rpcxio/rpcx-nacos/serverplugin"
 	"github.com/smallnest/rpcx/server"
 )
 
-var (
-	addr = flag.String("addr", "127.0.0.1:8972", "server address")
-)
+var addr = flag.String("addr", "127.0.0.1:8972", "server address")
 
 func main() {
 	flag.Parse()
