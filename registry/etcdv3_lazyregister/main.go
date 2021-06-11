@@ -22,7 +22,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d, _ := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, nil)
+	d, _ := etcd_client.NewEtcdV3Discovery(*basePath, "Arith", []string{*etcdAddr}, false, nil)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 
@@ -53,7 +53,6 @@ func main() {
 		log.Printf("%d * %d = %d", args.A, args.B, reply.C)
 		time.Sleep(time.Second)
 	}
-
 }
 
 func startServer() {
@@ -66,8 +65,8 @@ func startServer() {
 		panic(err)
 	}
 }
-func addRegistryPlugin(s *server.Server) {
 
+func addRegistryPlugin(s *server.Server) {
 	r := &serverplugin.EtcdV3RegisterPlugin{
 		ServiceAddress: "tcp@" + *addr,
 		EtcdServers:    []string{*etcdAddr},

@@ -35,7 +35,6 @@ func main() {
 }
 
 func addRegistryPlugin(s *server.Server) {
-
 	r := &serverplugin.EtcdRegisterPlugin{
 		ServiceAddress: "tcp@" + *addr,
 		EtcdServers:    []string{*etcdAddr},
