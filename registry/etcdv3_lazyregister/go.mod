@@ -5,5 +5,5 @@ go 1.15
 require (
 	github.com/rpcxio/rpcx-etcd v0.0.0-20210606082724-1a5593db7a0d
 	github.com/rpcxio/rpcx-examples v1.1.7-0.20210512062044-2230f00610e5
-	github.com/smallnest/rpcx v1.6.3-0.20210611110304-42c1abd97f0f
+	github.com/smallnest/rpcx v1.6.9
 )

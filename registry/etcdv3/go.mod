@@ -37,7 +37,7 @@ require (
 	github.com/rpcxio/rpcx-examples v1.1.6
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/smallnest/libkv-etcdv3-store v1.1.1 // indirect
-	github.com/smallnest/rpcx v1.6.3-0.20210611110304-42c1abd97f0f
+	github.com/smallnest/rpcx v1.6.9
 	github.com/smallnest/valkeyrie v0.0.0-20191030065038-13edeca3d026 // indirect
 	github.com/syndtr/goleveldb v1.0.0 // indirect
 	github.com/tatsushid/go-fastping v0.0.0-20160109021039-d7bb493dee3e // indirect

@@ -12,7 +12,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
 	github.com/rpcxio/rpcx-nacos v0.0.0-20210525063414-e99e0c81ae30 // indirect
-	github.com/smallnest/rpcx v1.6.3-0.20210611110304-42c1abd97f0f
+	github.com/smallnest/rpcx v1.6.9
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
 	github.com/vmihailenco/msgpack v4.0.0+incompatible // indirect
 	github.com/xtaci/kcp-go v5.4.20+incompatible
