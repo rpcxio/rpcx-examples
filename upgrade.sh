@@ -1,6 +1,6 @@
 #! /bin/sh
 
-version=HEAD
+version=master
 
 go get -v github.com/smallnest/rpcx@$version
 
