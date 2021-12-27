@@ -35,7 +35,6 @@ func main() {
 	tracer := otel.Tracer("rpcx")
 	p := serverplugin.NewOpenTelemetryPlugin(tracer, nil)
 	s.Plugins.Add(p)
-
 	s.RegisterName("Arith", new(Arith), "")
 
 	go func() {
@@ -61,6 +60,7 @@ func setOpenTelemetry() *trace.TracerProvider {
 		trace.WithSampler(trace.AlwaysSample()),
 		trace.WithBatcher(exporter),
 	)
+
 	otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))
 	otel.SetTracerProvider(tp)
 
