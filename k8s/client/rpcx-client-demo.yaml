@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rpcx-client-demo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: rpcx-client-demo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rpcx-client-demo
+    spec:
+      containers:
+      - name: rpcx-client-demo
+        image: smallnest/rpcx-client-demo:v1.0.4
