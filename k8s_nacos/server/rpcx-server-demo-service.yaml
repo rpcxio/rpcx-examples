@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rpcx-server-demo2-service	#Service 的名称
+  labels:     	#Service 自己的标签
+    app: rpcx-server-demo2	#为该 Service 设置 key 为 app，value 为 rpcx-server-demo 的标签
+spec:	    #这是关于该 Service 的定义，描述了 Service 如何选择 Pod，如何被访问
+  selector:	    #标签选择器
+    app: rpcx-server-demo2	#选择包含标签 app:rpcx-server-demo 的 Pod
+  ports:
+  - name: rpcx-server-demo2-port	#端口的名字
+    protocol: TCP	    #协议类型 TCP/UDP
+    port: 9981	        #集群内的其他容器组可通过 9981 端口访问 Service
+    targetPort: 8972	#将请求转发到匹配 Pod 的 8972 端口

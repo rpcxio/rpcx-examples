@@ -1,0 +1,4 @@
+2022-02-10T11:12:08.324+0800	[34mINFO[0m	udp server start, port: 55180
+2022-02-10T11:12:08.324+0800	[34mINFO[0m	Local IP:172.22.194.235
+2022-02-10T11:12:08.488+0800	[34mINFO[0m	service not found in cache DEFAULT_GROUP@@Arith@@test
+2022-02-10T11:12:08.490+0800	[34mINFO[0m	adding DEFAULT_GROUP@@Arith with test to listener map

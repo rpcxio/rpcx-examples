@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: rpcx-client-demo
-        image: smallnest/rpcx-client-demo:v1.0.4
+        image: smallnest/rpcx-client-demo:v1.0.5
