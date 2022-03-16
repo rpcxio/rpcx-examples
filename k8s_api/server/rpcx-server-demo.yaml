@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rpcx-server-demo-deployment
+  name: rpcx-server-demo-api-deployment
 spec:
   selector:
     matchLabels:
-      app: rpcx-server-demo
+      app: rpcx-server-demo-api
   replicas: 3
   template:
     metadata:
       labels:
-        app: rpcx-server-demo
+        app: rpcx-server-demo-api
     spec:
       containers:
-      - name: rpcx-server-demo
-        image: smallnest/rpcx-server-demo:0.1.0
+      - name: rpcx-server-demo-api
+        image: smallnest/rpcx-server-demo-api:0.1.0
         ports:
         - containerPort: 8972

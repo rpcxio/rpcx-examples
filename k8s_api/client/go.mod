@@ -1,6 +1,6 @@
-module github.com/rpcxio/rpcx-examples/k8s/client
+module github.com/rpcxio/rpcx-examples/k8s_api/client
 
-go 1.17
+go 1.18
 
 require (
 	github.com/rpcxio/rpcx-examples v1.1.6

@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rpcx-client-demo3-deployment
+  name: rpcx-client-demo-dns-deployment
 spec:
   selector:
     matchLabels:
-      app: rpcx-client-demo3
+      app: rpcx-client-demo-dns
   replicas: 1
   template:
     metadata:
       labels:
-        app: rpcx-client-demo3
+        app: rpcx-client-demo-dns
     spec:
       containers:
-      - name: rpcx-client-demo3
-        image: smallnest/rpcx-client-demo3:v1.0.1
+      - name: rpcx-client-demo-dns
+        image: smallnest/rpcx-client-demo-dns:v0.1.0

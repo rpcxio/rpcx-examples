@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rpcx-client-demo5-deployment
+  name: rpcx-client-demo-nacos-deployment
 spec:
   selector:
     matchLabels:
-      app: rpcx-client-demo5
+      app: rpcx-client-demo-nacos
   replicas: 1
   template:
     metadata:
       labels:
-        app: rpcx-client-demo5
+        app: rpcx-client-demo-nacos
     spec:
       containers:
-      - name: rpcx-client-demo5
-        image: smallnest/rpcx-client-demo5:v1.0.0
+      - name: rpcx-client-demo-nacos
+        image: smallnest/rpcx-client-demo-nacos:v0.1.0
         env:
         - name: Nacos_Host
           value: "console.nacos.io"

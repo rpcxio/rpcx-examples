@@ -1,4 +1,4 @@
-module github.com/rpcxio/rpcx-examples/k8s/server
+module github.com/rpcxio/rpcx-examples/k8s_api/server
 
 go 1.18
 

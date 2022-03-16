@@ -1,6 +1,6 @@
 module github.com/rpcxio/rpcx-examples/registry/etcdv3_lazyregister
 
-go 1.15
+go 1.18
 
 require (
 	github.com/rpcxio/rpcx-etcd v0.1.0

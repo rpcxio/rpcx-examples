@@ -28,9 +28,9 @@ import (
 var lastIPs []string
 
 func main() {
-	clientset, pairs := getPodIPs("rpcx-server-demo2", 8972)
+	clientset, pairs := getPodIPs("rpcx-server-demo-api", 8972)
 	d, _ := client.NewMultipleServersDiscovery(pairs)
-	go watchPodIPs("rpcx-server-demo2", 8972, clientset, d)
+	go watchPodIPs("rpcx-server-demo-api", 8972, clientset, d)
 
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
@@ -57,7 +57,7 @@ func watchPodIPs(serverPod string, port int, clientset *kubernetes.Clientset, d 
 	for range tick.C {
 
 		pods, err := clientset.CoreV1().Pods("").List(context.TODO(), metav1.ListOptions{
-			LabelSelector: "app=rpcx-server-demo2",
+			LabelSelector: "app=rpcx-server-demo-api",
 		})
 		if err != nil {
 			continue
@@ -84,7 +84,7 @@ func getPodIPs(serverPod string, port int) (*kubernetes.Clientset, []*client.KVP
 	}
 
 	pods, err := clientset.CoreV1().Pods("").List(context.TODO(), metav1.ListOptions{
-		LabelSelector: "app=rpcx-server-demo2",
+		LabelSelector: "app=rpcx-server-demo-api",
 	})
 	if err != nil {
 		panic(err.Error())

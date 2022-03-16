@@ -1,6 +1,6 @@
 module github.com/rpcxio/rpcx-examples/registry/etcd
 
-go 1.15
+go 1.18
 
 require (
 	github.com/abronan/valkeyrie v0.0.0-20200127174252-ef4277a138cd // indirect

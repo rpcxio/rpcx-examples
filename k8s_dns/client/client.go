@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	d, _ := client.NewDNSDiscovery("rpcx-server-demo-service", "tcp", 8972, time.Minute)
+	d, _ := client.NewDNSDiscovery("rpcx-server-demo-dns-service", "tcp", 8972, time.Minute)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 	args := example.Args{
