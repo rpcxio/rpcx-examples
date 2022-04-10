@@ -8,9 +8,7 @@ import (
 	"github.com/smallnest/rpcx/server"
 )
 
-var (
-	addr = flag.String("addr", "localhost:8972", "server address")
-)
+var addr = flag.String("addr", "localhost:8972", "server address")
 
 type Arith struct{}
 
@@ -24,7 +22,7 @@ func main() {
 	flag.Parse()
 
 	s := server.NewServer()
-	//s.Register(new(Arith), "")
+	// s.Register(new(Arith), "")
 	s.RegisterName("Arith", new(Arith), "")
 	err := s.Serve("tcp", *addr)
 	if err != nil {
