@@ -48,6 +48,7 @@ func addRegistryPlugin(s *server.Server) {
 		ClientConfig:   clientConfig,
 		ServerConfig:   serverConfig,
 		Cluster:        "test",
+		Group:          "",
 	}
 	err := r.Start()
 	if err != nil {

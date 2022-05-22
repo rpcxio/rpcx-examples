@@ -57,5 +57,5 @@ func configNacos() (client.ServiceDiscovery, error) {
 		Port:   80,
 	}}
 
-	return nclient.NewNacosDiscovery("Arith", "test", clientConfig, serverConfig)
+	return nclient.NewNacosDiscovery("Arith", "test", "", clientConfig, serverConfig)
 }
