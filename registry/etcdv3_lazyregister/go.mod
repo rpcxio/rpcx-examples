@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/rpcxio/rpcx-etcd v0.2.0
 	github.com/rpcxio/rpcx-examples v1.1.7-0.20210512062044-2230f00610e5
-	github.com/smallnest/rpcx v1.7.4
+	github.com/smallnest/rpcx v1.7.5-0.20220529095532-bcc67b78ce09
 )
 
 require (
