@@ -17,7 +17,7 @@ Enter one sub directory in this repository,  `go run server.go` in one terminal 
 For example,
 
 ```sh
-cd 101basic
+cd 101basic/server
 go run server.go
 ```
 
