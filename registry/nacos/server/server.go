@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/nacos-group/nacos-sdk-go/common/constant"
+	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
 	nserverplugin "github.com/rpcxio/rpcx-nacos/serverplugin"
 	"github.com/smallnest/rpcx/server"

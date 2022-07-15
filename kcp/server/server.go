@@ -1,3 +1,6 @@
+//go:build kcp
+// +build kcp
+
 //go run -tags kcp server.go
 package main
 

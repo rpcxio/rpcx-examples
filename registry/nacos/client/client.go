@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/nacos-group/nacos-sdk-go/common/constant"
+	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
 	example "github.com/rpcxio/rpcx-examples"
 	nclient "github.com/rpcxio/rpcx-nacos/client"
 	"github.com/smallnest/rpcx/client"
