@@ -7,6 +7,7 @@ import (
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
+	cclient "github.com/rpcxio/rpcx-zookeeper/client"
 	"github.com/smallnest/rpcx/client"
 )
 
@@ -18,7 +19,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d, _ := client.NewZookeeperDiscovery(*basePath, "Arith", []string{*zkAddr}, nil)
+	d, _ := cclient.NewZookeeperDiscovery(*basePath, "Arith", []string{*zkAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 

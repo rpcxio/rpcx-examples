@@ -7,6 +7,7 @@ import (
 	"sync"
 	"time"
 
+	cclient "github.com/rpcxio/rpcx-consul/client"
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
 )
@@ -20,7 +21,7 @@ func main() {
 	flag.Parse()
 
 	clientPool := sync.Pool{New: func() interface{} {
-		d, _ := client.NewConsulDiscovery(*basePath, "Arith", []string{*consulAddr}, nil)
+		d, _ := cclient.NewConsulDiscovery(*basePath, "Arith", []string{*consulAddr}, nil)
 		xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 		return xclient
 	}}

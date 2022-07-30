@@ -7,6 +7,7 @@ import (
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
+	cclient "github.com/rpcxio/rpcx-redis/client"
 	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/server"
 	"github.com/smallnest/rpcx/serverplugin"
@@ -21,7 +22,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d, _ := client.NewRedisDiscovery(*basePath, "Arith", []string{*redisAddr}, nil)
+	d, _ := cclient.NewRedisDiscovery(*basePath, "Arith", []string{*redisAddr}, nil)
 	xclient := client.NewXClient("Arith", client.Failover, client.RoundRobin, d, client.DefaultOption)
 	defer xclient.Close()
 

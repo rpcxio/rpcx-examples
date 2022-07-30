@@ -6,9 +6,9 @@ import (
 	"time"
 
 	metrics "github.com/rcrowley/go-metrics"
+	cserver "github.com/rpcxio/rpcx-consul/serverplugin"
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/server"
-	"github.com/smallnest/rpcx/serverplugin"
 )
 
 var (
@@ -29,7 +29,7 @@ func main() {
 
 func addRegistryPlugin(s *server.Server) {
 
-	r := &serverplugin.ConsulRegisterPlugin{
+	r := &cserver.ConsulRegisterPlugin{
 		ServiceAddress: "tcp@" + *addr,
 		ConsulServers:  []string{*consulAddr},
 		BasePath:       *basePath,

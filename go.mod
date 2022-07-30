@@ -8,10 +8,14 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/nacos-group/nacos-sdk-go/v2 v2.0.3
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
+	github.com/rpcxio/rpcx-consul v0.0.0-20220730062257-1ff0472e730f
 	github.com/rpcxio/rpcx-nacos v0.0.0-20220327105555-9ed88c3146d4
-	github.com/smallnest/rpcx v1.7.5-0.20220711124640-adafbb9fa948
+	github.com/rpcxio/rpcx-plugins v0.0.0-20220730073026-120f5ed14272
+	github.com/rpcxio/rpcx-redis v0.0.0-20220730062856-3cbf50258f70
+	github.com/rpcxio/rpcx-zookeeper v0.0.0-20220730061732-d20531677676
+	github.com/smallnest/rpcx v1.7.6
 	github.com/xtaci/kcp-go v5.4.20+incompatible
-	go.opentelemetry.io/otel v1.7.0
+	go.opentelemetry.io/otel v1.8.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.7.0
 	go.opentelemetry.io/otel/sdk v1.7.0
 	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d
@@ -57,7 +61,6 @@ require (
 	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/serf v0.9.8 // indirect
-	github.com/influxdata/influxdb1-client v0.0.0-20220302092344-a9ab5670611c // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/juju/ratelimit v1.0.1 // indirect
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
@@ -100,7 +103,7 @@ require (
 	github.com/valyala/fastrand v1.1.0 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
-	go.opentelemetry.io/otel/trace v1.7.0 // indirect
+	go.opentelemetry.io/otel/trace v1.8.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.21.0 // indirect

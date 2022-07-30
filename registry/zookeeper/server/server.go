@@ -7,8 +7,8 @@ import (
 
 	metrics "github.com/rcrowley/go-metrics"
 	example "github.com/rpcxio/rpcx-examples"
+	cserver "github.com/rpcxio/rpcx-zookeeper/serverplugin"
 	"github.com/smallnest/rpcx/server"
-	"github.com/smallnest/rpcx/serverplugin"
 )
 
 var (
@@ -29,7 +29,7 @@ func main() {
 
 func addRegistryPlugin(s *server.Server) {
 
-	r := &serverplugin.ZooKeeperRegisterPlugin{
+	r := &cserver.ZooKeeperRegisterPlugin{
 		ServiceAddress:   "tcp@" + *addr,
 		ZooKeeperServers: []string{*zkAddr},
 		BasePath:         *basePath,

@@ -6,6 +6,7 @@ import (
 	"log"
 	"time"
 
+	cclient "github.com/rpcxio/rpcx-consul/client"
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
 )
@@ -18,7 +19,7 @@ var (
 func main() {
 	flag.Parse()
 
-	d, _ := client.NewConsulDiscoveryTemplate(*basePath, []string{*consulAddr}, nil)
+	d, _ := cclient.NewConsulDiscoveryTemplate(*basePath, []string{*consulAddr}, nil)
 	oneClient := client.NewOneClient(client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer oneClient.Close()
 

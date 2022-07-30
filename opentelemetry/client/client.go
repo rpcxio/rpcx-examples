@@ -5,6 +5,7 @@ import (
 	"flag"
 	"log"
 
+	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/share"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
@@ -12,7 +13,7 @@ import (
 	"go.opentelemetry.io/otel/sdk/trace"
 
 	example "github.com/rpcxio/rpcx-examples"
-	"github.com/smallnest/rpcx/client"
+	rotel "github.com/rpcxio/rpcx-plugins/client/otel"
 )
 
 var addr = flag.String("addr", "localhost:8972", "server address")
@@ -29,7 +30,7 @@ func main() {
 	defer xclient.Close()
 
 	tracer := otel.Tracer("rpcx")
-	p := client.NewOpenTelemetryPlugin(tracer, nil)
+	p := rotel.NewOpenTelemetryPlugin(tracer, nil)
 
 	pc := client.NewPluginContainer()
 	pc.Add(p)

@@ -6,13 +6,13 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/smallnest/rpcx/serverplugin"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/trace"
 
 	example "github.com/rpcxio/rpcx-examples"
+	rotel "github.com/rpcxio/rpcx-plugins/server/otel"
 	"github.com/smallnest/rpcx/server"
 )
 
@@ -33,7 +33,7 @@ func main() {
 	s := server.NewServer()
 
 	tracer := otel.Tracer("rpcx")
-	p := serverplugin.NewOpenTelemetryPlugin(tracer, nil)
+	p := rotel.NewOpenTelemetryPlugin(tracer, nil)
 	s.Plugins.Add(p)
 	s.RegisterName("Arith", new(Arith), "")
 

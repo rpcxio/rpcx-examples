@@ -6,8 +6,8 @@ import (
 	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
+	cserver "github.com/rpcxio/rpcx-redis/serverplugin"
 	"github.com/smallnest/rpcx/server"
-	"github.com/smallnest/rpcx/serverplugin"
 )
 
 var (
@@ -31,7 +31,7 @@ func main() {
 
 func addRegistryPlugin(s *server.Server) {
 
-	r := &serverplugin.RedisRegisterPlugin{
+	r := &cserver.RedisRegisterPlugin{
 		ServiceAddress: "tcp@" + *addr,
 		RedisServers:   []string{*redisAddr},
 		BasePath:       *basePath,
