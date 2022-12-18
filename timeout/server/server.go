@@ -26,5 +26,6 @@ func main() {
 
 	s := server.NewServer()
 	s.RegisterName("Arith", new(Arith), "")
+
 	s.Serve("tcp", *addr)
 }

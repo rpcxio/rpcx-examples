@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
 	github.com/rpcxio/rpcx-examples v1.1.6
-	github.com/smallnest/rpcx v1.7.12-0.20221212031540-ce2be145224b
+	github.com/smallnest/rpcx v1.7.14
 )
 
 require (
