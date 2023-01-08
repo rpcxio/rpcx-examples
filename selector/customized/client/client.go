@@ -24,7 +24,7 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.SelectByUser, d, client.DefaultOption)
 	defer xclient.Close()
 
-	xclient.SetSelector(&alwaysFirstSelector{})
+	//xclient.SetSelector(&alwaysFirstSelector{})
 
 	args := &example.Args{
 		A: 10,
