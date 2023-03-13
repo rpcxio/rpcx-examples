@@ -8,6 +8,7 @@ import (
 
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/share"
 )
 
 var (
@@ -16,6 +17,8 @@ var (
 
 func main() {
 	flag.Parse()
+
+	share.Trace = true
 
 	d, _ := client.NewPeer2PeerDiscovery("tcp@"+*addr, "")
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
