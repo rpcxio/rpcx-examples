@@ -3,9 +3,9 @@ module github.com/rpcxio/rpcx-examples/registry/etcdv3_lazyregister
 go 1.18
 
 require (
-	github.com/rpcxio/rpcx-etcd v0.2.1-0.20220805044628-9513c64d3950
+	github.com/rpcxio/rpcx-etcd v0.3.2
 	github.com/rpcxio/rpcx-examples v1.1.7-0.20210512062044-2230f00610e5
-	github.com/smallnest/rpcx v1.8.3
+	github.com/smallnest/rpcx v1.8.9
 )
 
 require (
@@ -57,7 +57,7 @@ require (
 	github.com/rpcxio/libkv v0.5.1 // indirect
 	github.com/rs/cors v1.8.3 // indirect
 	github.com/rubyist/circuitbreaker v2.2.1+incompatible // indirect
-	github.com/smallnest/quick v0.0.0-20220703133648-f13409fa6c67 // indirect
+	github.com/smallnest/quick v0.1.0 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/templexxx/cpufeat v0.0.0-20180724012125-cef66df7f161 // indirect
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
@@ -83,6 +83,6 @@ require (
 	golang.org/x/tools v0.7.0 // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	google.golang.org/grpc v1.38.0 // indirect
-	google.golang.org/protobuf v1.29.0 // indirect
+	google.golang.org/protobuf v1.29.1 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 )

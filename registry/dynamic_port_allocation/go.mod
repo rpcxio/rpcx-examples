@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
 	github.com/rpcxio/rpcx-examples v1.1.6
-	github.com/smallnest/rpcx v1.7.15
+	github.com/smallnest/rpcx v1.8.9
 )
 
 require (
@@ -39,7 +39,7 @@ require (
 	github.com/peterbourgon/g2s v0.0.0-20170223122336-d4e7ad98afea // indirect
 	github.com/psampaz/go-mod-outdated v0.7.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
-	github.com/rpcxio/rpcx-etcd v0.2.1-0.20220805044628-9513c64d3950 // indirect
+	github.com/rpcxio/rpcx-etcd v0.3.2 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/smallnest/libkv-etcdv3-store v1.1.1 // indirect
 	github.com/smallnest/valkeyrie v0.0.0-20191030065038-13edeca3d026 // indirect

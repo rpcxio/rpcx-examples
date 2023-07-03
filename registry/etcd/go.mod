@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475
 	github.com/rpcxio/rpcx-examples v1.1.6
-	github.com/smallnest/rpcx v1.8.3
+	github.com/smallnest/rpcx v1.8.9
 )
 
 require (
@@ -15,5 +15,5 @@ require (
 	github.com/anacrolix/envpprof v1.1.0 // indirect
 	github.com/anacrolix/sync v0.2.0 // indirect
 	github.com/anacrolix/utp v0.0.0-20180219060659-9e0e1d1d0572 // indirect
-	github.com/rpcxio/rpcx-etcd v0.2.1-0.20220805044628-9513c64d3950 // indirect
+	github.com/rpcxio/rpcx-etcd v0.3.2 // indirect
 )
