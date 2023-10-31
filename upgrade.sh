@@ -1,6 +1,6 @@
 #! /bin/sh
 
-version=v1.8.9
+version=v1.8.13
 
 go get -v github.com/smallnest/rpcx@$version
 
