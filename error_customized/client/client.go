@@ -8,6 +8,7 @@ import (
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/rpcxio/rpcx-examples/error_customized"
 	"github.com/smallnest/rpcx/client"
+	"github.com/smallnest/rpcx/protocol"
 )
 
 var (
@@ -21,7 +22,7 @@ func main() {
 	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, client.DefaultOption)
 	defer xclient.Close()
 
-	client.ClientErrorFunc = func(e string) client.ServiceError {
+	client.ClientErrorFunc = func(res *protocol.Message, e string) client.ServiceError {
 		err, e1 := error_customized.MewErrorString(e)
 		if e1 == nil {
 			return err
