@@ -14,7 +14,7 @@ require (
 	github.com/rpcxio/rpcx-plugins v0.0.0-20220730073026-120f5ed14272
 	github.com/rpcxio/rpcx-redis v0.0.0-20220730062856-3cbf50258f70
 	github.com/rpcxio/rpcx-zookeeper v0.0.0-20220730061732-d20531677676
-	github.com/smallnest/rpcx v1.8.17
+	github.com/smallnest/rpcx v1.8.18
 	github.com/xtaci/kcp-go v5.4.20+incompatible
 	go.opentelemetry.io/otel v1.8.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.7.0
@@ -65,6 +65,7 @@ require (
 	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/serf v0.9.8 // indirect
+	github.com/jamiealquiza/tachymeter v2.0.0+incompatible // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/juju/ratelimit v1.0.2 // indirect
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
@@ -96,7 +97,7 @@ require (
 	github.com/rubyist/circuitbreaker v2.2.1+incompatible // indirect
 	github.com/samuel/go-zookeeper v0.0.0-20201211165307-7117e9ea2414 // indirect
 	github.com/smallnest/quick v0.1.0 // indirect
-	github.com/smallnest/statsview v0.0.0-20231119053547-3d59443f9ae3 // indirect
+	github.com/smallnest/statsview v0.0.0-20231119085602-10700f9abec4 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/templexxx/cpufeat v0.0.0-20180724012125-cef66df7f161 // indirect
 	github.com/templexxx/xor v0.0.0-20191217153810-f85b25db303b // indirect
