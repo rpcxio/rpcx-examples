@@ -14,7 +14,7 @@ require (
 	github.com/rpcxio/rpcx-plugins v0.0.0-20220730073026-120f5ed14272
 	github.com/rpcxio/rpcx-redis v0.0.0-20220730062856-3cbf50258f70
 	github.com/rpcxio/rpcx-zookeeper v0.0.0-20220730061732-d20531677676
-	github.com/smallnest/rpcx v1.8.18
+	github.com/smallnest/rpcx v1.8.23
 	github.com/xtaci/kcp-go v5.4.20+incompatible
 	go.opentelemetry.io/otel v1.8.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.7.0
@@ -129,4 +129,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/smallnest/rpcx => ../../smallnest/rpcx
+// replace github.com/smallnest/rpcx => ../../smallnest/rpcx
