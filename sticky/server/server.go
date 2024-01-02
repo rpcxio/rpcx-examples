@@ -3,6 +3,8 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
+	"time"
 
 	example "github.com/rpcxio/rpcx-examples"
 	"github.com/smallnest/rpcx/server"
@@ -33,13 +35,22 @@ func main() {
 	go func() {
 		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith), "")
-		s.Serve("reuseport", *addr1)
+		go s.Serve("reuseport", *addr1)
+		time.Sleep(5 * time.Second)
+		s.Close()
+		time.Sleep(2 * time.Second)
+		fmt.Println("restarted")
+
+		// start again
+		s = server.NewServer()
+		s.RegisterName("Arith", new(Arith), "")
+		go s.Serve("tcp", *addr1)
 	}()
 
 	go func() {
 		s := server.NewServer()
 		s.RegisterName("Arith", new(Arith2), "")
-		s.Serve("reuseport", *addr2)
+		s.Serve("tcp", *addr2)
 	}()
 
 	select {}

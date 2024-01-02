@@ -605,6 +605,8 @@ github.com/smallnest/quick v0.1.0/go.mod h1:mjmFVnOUd/Ruq8Gb7wxFjweGsrVILFsKrcwL
 github.com/smallnest/rpcx v1.7.3/go.mod h1:HYbZKpSsE7YgMlAsojDyV4sNKvaQgsHtpLfrERksrTs=
 github.com/smallnest/rpcx v1.8.23 h1:ob8iSSb6vRB8NSlyXZv8pAypKYmvs+AaiWq6xrPej5g=
 github.com/smallnest/rpcx v1.8.23/go.mod h1:n1DOWRMb8QQHCvSE27ga+Nt8HR4DRuOct9/iKUiktZA=
+github.com/smallnest/rpcx v1.8.24 h1:gIyzVhf757dDeV4y0ZC6lz2+6Vcy3SikDqWST7LZcxk=
+github.com/smallnest/rpcx v1.8.24/go.mod h1:n1DOWRMb8QQHCvSE27ga+Nt8HR4DRuOct9/iKUiktZA=
 github.com/smallnest/statsview v0.0.0-20231119085602-10700f9abec4 h1:jLb5bc8CWY/7WrZuir9Xd/RJCgPC5H/V7FO5PFS9ojA=
 github.com/smallnest/statsview v0.0.0-20231119085602-10700f9abec4/go.mod h1:BMgxQ/U/wQ/mJY8WyPxIG+e3cx7HKbKSZL+DniC2tvc=
 github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d/go.mod h1:OnSkiWE9lh6wB0YB77sQom3nweQdgAjqCqsofrRNTgc=

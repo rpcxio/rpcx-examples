@@ -23,7 +23,7 @@ func main() {
 	opt := client.DefaultOption
 	opt.Sticky = true
 
-	xclient := client.NewXClient("Arith", client.Failtry, client.RoundRobin, d, opt)
+	xclient := client.NewXClient("Arith", client.Failtry, client.RandomSelect, d, opt)
 	defer xclient.Close()
 
 	args := &example.Args{
