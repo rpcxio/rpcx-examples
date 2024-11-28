@@ -31,7 +31,7 @@ require (
 	github.com/go-ping/ping v0.0.0-20201115131931-3300c582a663 // indirect
 	github.com/go-redis/redis/v8 v8.8.2 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
-	github.com/gogo/protobuf v1.3.1 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/snappy v0.0.2 // indirect
 	github.com/grandcat/zeroconf v0.0.0-20180329153754-df75bb3ccae1 // indirect
 	github.com/hashicorp/consul/api v1.8.1 // indirect
